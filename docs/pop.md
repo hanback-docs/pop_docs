@@ -459,7 +459,7 @@ from pop import *
 &emsp;**Definitions**    
 &emsp;<code class="code_accent">OLED_SSD1306_I2C_128x32</code> : OLED device type number, if model name is 'SSD1306', select this type    
 &emsp;<code class="code_accent">OLED_SH1106_I2C_128x64</code> : OLED device type number, if model name is 'SSH1106', select this type    
-&emsp;<code class="code_accent">BLACK</code> : In OLED, you can use only 2 colors, One of them is black. Numeric value is 0   
+&emsp;<code class="code_accent">BLACK</code> : In OLED, you can use only 2 colors, One of them is black, Numeric value is 0   
 &emsp;<code class="code_accent">WHITE</code> : Another of them is white, Numeric value is 1    
 
 <h5>&emsp;Methods</h5>

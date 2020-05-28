@@ -11,56 +11,56 @@ from pop import *
 
 ## <span class="title">Class</span> <span class="title_accent">**Out**</span>    
 
-<blockquote class="desc"> Output device controlled throught GPIO</blockquote>
+<blockquote class="desc"> Output device is controlled by GPIO</blockquote>
 
 <h5>&emsp;Initialization</h5>
 
 &emsp;<code class="code_accent">Out(n)</code> : Out Object<br>
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Output Device
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the Output Device
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">on()</code> : Set GPIO Connected to Output Device to HIGH  
-&emsp;<code class="code_accent">off()</code> : Set GPIO Connected to Output Device to LOW   
+&emsp;<code class="code_accent">on()</code> : Set GPIO connected to Output Device to HIGH  
+&emsp;<code class="code_accent">off()</code> : Set GPIO connected to Output Device to LOW   
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Led**</span>    
-<blockquote class="desc">LEDs are controlled via GPIO</blockquote>    
+<blockquote class="desc">LEDs are controlled by GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
 &emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from Out Class<br>
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the LED   
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the LED   
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Leds**</span>    
-<blockquote class="desc">LEDs are controlled via GPIO</blockquote>    
+<blockquote class="desc">LEDs are controlled by GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Leds(n)</code> : Leds Object inheriting from Led Class<br>
+&emsp;<code class="code_accent">Leds(n)</code> : Leds object inheriting from Led Class<br>
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the LED  
+&emsp;&emsp;&emsp;`n` : List number defined in board and connected to the LED  
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">allOn()</code> : Set all GPIO Connected to Output Device to HIGH    
-&emsp;<code class="code_accent">allOff()</code> : Set all GPIO Connected to Output Device to LOW    
+&emsp;<code class="code_accent">allOn()</code> : Set all GPIO connected to Output Device to HIGH    
+&emsp;<code class="code_accent">allOff()</code> : Set all GPIO connected to Output Device to LOW    
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Fan**</span>    
-<blockquote class="desc">Fan is controlled via GPIO</blockquote>    
+<blockquote class="desc">Fan is controlled by GPIO</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Fan(n)</code> : Fan Object inheriting from Out Class<br>
+&emsp;<code class="code_accent">Fan(n)</code> : Fan object inheriting from Out Class<br>
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Fan   
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the Fan   
 
 ---
 
@@ -71,7 +71,7 @@ from pop import *
 
 &emsp;<code class="code_accent">Input(n,activeHigh=Ture)</code> : Input Object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Input Device    
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the Input Device    
 &emsp;&emsp;&emsp;`activeHigh` : Used to check if the Input Device is HIGH when pressed , Default `True`    
 
 <h5>&emsp;Definitions</h5>
@@ -82,11 +82,11 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">read()</code> : Read the Input Device Status    
-&emsp;<code class="code_accent">setCallback(func,param=None,type=BOTH)</code> : Set Callback Function When Detect Edge<br>
+&emsp;<code class="code_accent">read()</code> : Read the Input Device status    
+&emsp;<code class="code_accent">setCallback(func,param=None,type=BOTH)</code> : Set Callback function when detecting Edge<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
-&emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
+&emsp;&emsp;&emsp;`param` : Parameters passed to the Callback function , Default None    
 &emsp;&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH  
 
 ---
@@ -96,9 +96,9 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Switch(n)</code> : Switch Object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switch(n)</code> : Switch object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Switch    
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the switch    
 
 ---
 
@@ -107,9 +107,9 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Switches(n)</code> : Switch Object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switches(n)</code> : Switch object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`n` : list Number defined board config Connected to the Switch    
+&emsp;&emsp;&emsp;`n` : List number defined in the board and connected to the Switch    
 
 ---
 
@@ -118,14 +118,14 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Pir(n)</code> : Pir Object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Pir(n)</code> : Pir object inheriting from Input Class<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the Pir 
+&emsp;&emsp;&emsp;`n` : GPIO number connected to the Pir 
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**SpiAdc**</span>    
-<blockquote class="desc">adc chip control through spi interface</blockquote>    
+<blockquote class="desc"> Control the adc chip through SPI interface</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -140,49 +140,49 @@ from pop import *
 
 &emsp;<code class="code_accent">TYPE_AVERAGE</code> : Average data based on sampling count    
 &emsp;<code class="code_accent">TYPE_NORMAL</code> : Unaveraged raw data    
-&emsp;<code class="code_accent">MODE_FULL</code> : Call Callback function always    
+&emsp;<code class="code_accent">MODE_FULL</code> : Always call Callback function    
 &emsp;<code class="code_accent">MODE_INCLUSIVE</code> : If data is in arange(max, min), call Callback function    
 &emsp;<code class="code_accent">MODE_EXCLUSIVE</code> : If data is over arange, call Callback function    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">getSample()</code> : Get Sampling Count    
-&emsp;<code class="code_accent">read()</code> : Read Data from Device (Raw Type)    
-&emsp;<code class="code_accent">readAverage()</code> : Read Average Data from Device    
+&emsp;<code class="code_accent">getSample()</code> : Get sampling count    
+&emsp;<code class="code_accent">read()</code> : Read data from device (Raw Type)    
+&emsp;<code class="code_accent">readAverage()</code> : Read average data from device    
 &emsp;<code class="code_accent">run()</code> : Read data and call Callback function according to mode  
-&emsp;<code class="code_accent">setChipSelect(cs)</code> : Set SPI Chip Select PIN<br>
+&emsp;<code class="code_accent">setChipSelect(cs)</code> : Set the SPI chip select PIN<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`cs` : Chipselect GPIO for SPI Interface
+&emsp;&emsp;&emsp;`cs` : Chip select GPIO for SPI Interface
 
-&emsp;<code class="code_accent">setSample(sample)</code> : Set Sampling Count<br>
+&emsp;<code class="code_accent">setSample(sample)</code> : Set sampling count<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sample` : Sampling count
 
 
-&emsp;<code class="code_accent">readVolt(ref=3.3,max=3020.0)</code> : Read Data from Device (Voltage Type)<br>
+&emsp;<code class="code_accent">readVolt(ref=3.3,max=3020.0)</code> : Read data from device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`ref` : Reference Voltage    
+&emsp;&emsp;&emsp;`ref` : Reference voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
 
 
-&emsp;<code class="code_accent">readVoltAverage(ref=3.3,max=3020.0)</code> : Read Data from Device (Voltage Type)<br>
+&emsp;<code class="code_accent">readVoltAverage(ref=3.3,max=3020.0)</code> : Read data from device (Voltage Type)<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`ref` : Reference Voltage    
+&emsp;&emsp;&emsp;`ref` : Reference voltage    
 &emsp;&emsp;&emsp;`max` : Maximum value of raw data
 
 &emsp;<code class="code_accent">setCallback(func,param=None,type=TYPE_AVERAGE,mode=MODE_FULL,min=0,max=ADC_MAX)</code> <br>&emsp;: Set up callback function for automatic data read<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Function to use when calling Callback    
-&emsp;&emsp;&emsp;`param` : Arguments passed to the Callback function , Default None    
-&emsp;&emsp;&emsp;`type` : Data Read Type , Default TYPE_AVERAGE    
-&emsp;&emsp;&emsp;`mode` : Select Mode , Default MODE_FULL    
-&emsp;&emsp;&emsp;`min` : analog data minimum , Default 0    
-&emsp;&emsp;&emsp;`max` : analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
+&emsp;&emsp;&emsp;`param` : Parameters passed to the Callback function , Default None    
+&emsp;&emsp;&emsp;`type` : Data read type , Default TYPE_AVERAGE    
+&emsp;&emsp;&emsp;`mode` : Select mode , Default MODE_FULL    
+&emsp;&emsp;&emsp;`min` : Analog data minimum , Default 0    
+&emsp;&emsp;&emsp;`max` : Analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Psd**</span>    
-<blockquote class="desc">Distance measurement using PSD sensor</blockquote>    
+<blockquote class="desc"> Measure the distance with PSD sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -203,7 +203,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**CDS**</span>  
-<blockquote class="desc">Light measurement using CDS sensor</blockquote>    
+<blockquote class="desc"> Measure the Light with CDS sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -301,7 +301,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Sound**</span>    
-<blockquote class="desc">Ambient sound measurement using Sound sensor</blockquote>    
+<blockquote class="desc"> Measure the Ambient sound with Sound sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -315,7 +315,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Vr**</span>    
-<blockquote class="desc">Voltage measurement with variable resistor</blockquote>    
+<blockquote class="desc"> Measure the Voltage with variable resistor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 
@@ -329,7 +329,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Potentiometer**</span>    
-<blockquote class="desc">Voltage measurement with variable resistor</blockquote>    
+<blockquote class="desc"> Measure the Voltage with variable resistor</blockquote>    
 
 <h5>&emsp;Initialization</h5>
 
@@ -342,8 +342,8 @@ from pop import *
 
 <h5>&emsp;Methods</h5>   
   
-&emsp;<code class="code_accent">readAverage()</code> : return level from range table   
-&emsp;<code class="code_accent">getRangeTable()</code> : return range table  
+&emsp;<code class="code_accent">readAverage()</code> : Return level from range table   
+&emsp;<code class="code_accent">getRangeTable()</code> : Return range table  
 &emsp;<code class="code_accent">setRangeTable(table)</code> : Set potentiometer range table<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
@@ -352,17 +352,17 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**PiezoBuzzer**</span>    
-<blockquote class="desc">PiezoBuzzer controlled via Software PWM</blockquote>  
+<blockquote class="desc">PiezoBuzzer is controlled by Software PWM</blockquote>  
 
 <h5>&emsp;Initialization</h5>   
 
 &emsp;<code class="code_accent">PiezoBuzzer(n)</code> : PiezoBuzzer object inheriting from PopThread<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`n` : GPIO Number Connected to the PiezoBuzzer defined board setting or Can setting manually    
+&emsp;&emsp;&emsp;`n` : A GPIO number connected to the PiezoBuzzer defined in board, or it can be manually set    
 
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">isPlay()</code> : return play status  
+&emsp;<code class="code_accent">isPlay()</code> : Return play status  
 &emsp;<code class="code_accent">getTempo()</code> : Get tempo value  
 &emsp;<code class="code_accent">setTempo(n)</code> : Set tempo value<br>
 &emsp;&emsp;**Params**   
@@ -378,7 +378,7 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`duration` : The duration of the stopping
 
-&emsp;<code class="code_accent">play(sheet)</code> : play music by sheet<br>
+&emsp;<code class="code_accent">play(sheet)</code> : Play music by sheet<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
 
@@ -446,7 +446,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Oled**</span>    
-<blockquote class="desc">Oled Controlled vi I2C Interface</blockquote>    
+<blockquote class="desc">Oled is controlled by I2C Interface</blockquote>    
 
 <h5>&emsp;Initialization</h5>  
 
@@ -459,8 +459,8 @@ from pop import *
 &emsp;**Definitions**    
 &emsp;<code class="code_accent">OLED_SSD1306_I2C_128x32</code> : OLED device type number, if model name is 'SSD1306', select this type    
 &emsp;<code class="code_accent">OLED_SH1106_I2C_128x64</code> : OLED device type number, if model name is 'SSH1106', select this type    
-&emsp;<code class="code_accent">BLACK</code> : In OLED, you can use only 2 colors. One of them is black. Numeric value is 0    
-&emsp;<code class="code_accent">WHITE</code> : Another of them is white. Numeric value is 1    
+&emsp;<code class="code_accent">BLACK</code> : In OLED, you can use only 2 colors, One of them is black. Numeric value is 0   
+&emsp;<code class="code_accent">WHITE</code> : Another of them is white, Numeric value is 1    
 
 <h5>&emsp;Methods</h5>
 
@@ -468,11 +468,11 @@ from pop import *
 &emsp;<code class="code_accent">height()</code> : Return height of OLED   
 &emsp;<code class="code_accent">display()</code> : Display buffer data on OLED    
 &emsp;<code class="code_accent">clearDisplay()</code> : Clear the data on OLED    
-&emsp;<code class="code_accent">init(type=OLED_SH1106_I2C_128x64)</code> <br>&emsp;: Initialize OLED and set width/height of OLED. This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
+&emsp;<code class="code_accent">init(type=OLED_SH1106_I2C_128x64)</code> <br>&emsp;: Initialize OLED and set width/height of OLED, This method calls setTextSize(), setTextColor(), clearDisplay()    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`type` : Select OLED type
 
-&emsp;<code class="code_accent">print(string)</code> : Print a string on OLED. Replace '\n' to New-Line    
+&emsp;<code class="code_accent">print(string)</code> : Print a string on OLED, Replace '\n' to New-Line    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`string`: The string to print on OLED
 
@@ -552,22 +552,22 @@ from pop import *
 
 &emsp;<code class="code_accent">drawTriangle(x0, y0, x1, y1, x2, y2, color)</code> : Draw a triangle on OLED    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x0` : First point of x-axis    
-&emsp;&emsp;&emsp;`y0` : First point of y-axis    
-&emsp;&emsp;&emsp;`x1` : Second point of x-axis    
-&emsp;&emsp;&emsp;`y1` : Second point of y-axis    
-&emsp;&emsp;&emsp;`x2` : Third point of x-axis    
-&emsp;&emsp;&emsp;`y2` : Third point of y-axis    
+&emsp;&emsp;&emsp;`x0` : The first point of x-axis    
+&emsp;&emsp;&emsp;`y0` : The first point of y-axis    
+&emsp;&emsp;&emsp;`x1` : The second point of x-axis    
+&emsp;&emsp;&emsp;`y1` : The second point of y-axis    
+&emsp;&emsp;&emsp;`x2` : The third point of x-axis    
+&emsp;&emsp;&emsp;`y2` : The third point of y-axis    
 &emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)    
 
 &emsp;<code class="code_accent">fillTriangle(x0, y0, x1, y1, x2, y2, color)</code> : Draw a filled triangle on OLED    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x0` : First point of x-axis    
-&emsp;&emsp;&emsp;`y0` : First point of y-axis    
-&emsp;&emsp;&emsp;`x1` : Second point of x-axis    
-&emsp;&emsp;&emsp;`y1` : Second point of y-axis    
-&emsp;&emsp;&emsp;`x2` : Third point of x-axis    
-&emsp;&emsp;&emsp;`y2` : Third point of y-axis    
+&emsp;&emsp;&emsp;`x0` : The first point of x-axis    
+&emsp;&emsp;&emsp;`y0` : The first point of y-axis    
+&emsp;&emsp;&emsp;`x1` : The second point of x-axis    
+&emsp;&emsp;&emsp;`y1` : The second point of y-axis    
+&emsp;&emsp;&emsp;`x2` : The third point of x-axis    
+&emsp;&emsp;&emsp;`y2` : The third point of y-axis    
 &emsp;&emsp;&emsp;`color` : The color of a triangle. BLACK(0) or WHITE(1)
    
 &emsp;<code class="code_accent">drawChar(x, y, c, color, bg, size)</code> : Draw a character on OLED    
@@ -661,12 +661,12 @@ from pop import *
 	
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">isAvailable()</code> : return Gesture detection status(1). Wait until Gesture is detected    
-&emsp;<code class="code_accent">read()</code> : return number as Gesture status.  
+&emsp;<code class="code_accent">isAvailable()</code> : Return whether Gesture sensor is available(1), Wait until Gesture is detected    
+&emsp;<code class="code_accent">read()</code> : Return number as Gesture status  
 &emsp;&emsp;**Return**    
 &emsp;&emsp;&emsp;`0` : "None" , `1` : "Left", `2` : "Right", `3` : "Up", `4` : "Down", `5`: "Near", `6` : "Far"    
 
-&emsp;<code class="code_accent">readStr()</code> : return String as Gesture status.    
+&emsp;<code class="code_accent">readStr()</code> : Return String as Gesture status    
 &emsp;&emsp;**Return**  
 &emsp;&emsp;&emsp;"None" , "Left", "Right", "Up", "Down", "Near", "Far"    
 		
@@ -676,66 +676,66 @@ from pop import *
 &emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Light()` : Light object  <br><br>
 &emsp;&emsp;**Methods**<br>
-&emsp;&emsp;`read()` : return light value    
+&emsp;&emsp;`read()` : Return light value    
 
 &emsp;**Color**    
 &emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Color()` : Color object  <br><br>
 &emsp;&emsp;**Methods**<br>
-&emsp;&emsp;`readRed()` : return Red value    
-&emsp;&emsp;`readGreen()` : return Green value    
-&emsp;&emsp;`readBlue()` : return Blue value
+&emsp;&emsp;`readRed()` : Return Red value    
+&emsp;&emsp;`readGreen()` : Return Green value    
+&emsp;&emsp;`readBlue()` : Return Blue value
 
 &emsp;**Proximity**  
 &emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Proximity()` : Proximity object  <br><br>
 &emsp;&emsp;**Methods**<br>
-&emsp;&emsp;`read()` : return Proximity value    
+&emsp;&emsp;`read()` : Return Proximity value    
 	
 <hr/>
 
 ## <span class="title">Class</span> <span class="title_accent">**PixelDisplay**</span>    
-<blockquote class="desc">Pixel Display controlled via Hardware PWM</blockquote>  
+<blockquote class="desc">Pixel Display is controlled by Hardware PWM</blockquote>  
   
 <h5>&emsp;Initialization</h5> 
 
 &emsp;<code class="code_accent">PixelDisplay(width=8, height=8, gpio=-1, type=GRB, dma=10, automode=True, debug=False)</code> <br>&emsp;: PixelDisplay object    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`width` : Number of Pixel width    
-&emsp;&emsp;&emsp;`height` : Number of Pixel height    
-&emsp;&emsp;&emsp;`automode` : automode setting. `True` or `False`    
+&emsp;&emsp;&emsp;`width` : Number of pixel width    
+&emsp;&emsp;&emsp;`height` : Number of pixel height    
+&emsp;&emsp;&emsp;`automode` : Automode setting. `True` or `False`    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">display()</code> : send command from buffer. when Automode `False` use    
-&emsp;<code class="code_accent">getRGBType()</code>: getRGBType    
-&emsp;<code class="code_accent">RGBtoHEX(color_arr)</code> : convert RGB list data to HEX  
-&emsp;<code class="code_accent">clear()</code> : clear PixelDisplay  
-&emsp;<code class="code_accent">rainbow()</code> : display rainbow color on Pixel Display  
-&emsp;<code class="code_accent">fill(color_arr)</code> : Fill PixelDisplay to one color    
+&emsp;<code class="code_accent">display()</code> : Send command from buffer when Automode is `False`, this is not executed and the command is automaically sent when Automode is `True`     
+&emsp;<code class="code_accent">getRGBType()</code>: Get the RGB Type    
+&emsp;<code class="code_accent">RGBtoHEX(color_arr)</code> : Convert the RGB list data to HEX  
+&emsp;<code class="code_accent">clear()</code> : Clear Pixel Display  
+&emsp;<code class="code_accent">rainbow()</code> : Display rainbow color on Pixel Display  
+&emsp;<code class="code_accent">fill(color_arr)</code> : Fill Pixel Display with one color    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`color_arr` : A color to be filled. Type is list of [R, G, B]  
    
-&emsp;<code class="code_accent">setColor(x, y, color_arr)</code> : set PixelDisplay color_arr on x,y    
+&emsp;<code class="code_accent">setColor(x, y, color_arr)</code> : Set Pixel Display color_arr on x,y    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis    
 &emsp;&emsp;&emsp;`y` : y-axis    
 &emsp;&emsp;&emsp;`color_arr` : A color to be set. Type is list of [R, G, B] or HEX (0xRRGGBB)    
 
-&emsp;<code class="code_accent">getColor(x, y)</code> : return color on x,y as INT type    
+&emsp;<code class="code_accent">getColor(x, y)</code> : Return color on x,y as INT type    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : x-axis    
 &emsp;&emsp;&emsp;`y` : y-axis 
 
-&emsp;<code class="code_accent">setAutomode(automode)</code> : set automode. default `True`. if `False` set, shuld use display()    
+&emsp;<code class="code_accent">setAutomode(automode)</code> : Set automode. Default `True`. If `False` set, display() should be used    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
    
-&emsp;<code class="code_accent">setBrightness(brightness)</code> : set Brightness    
+&emsp;<code class="code_accent">setBrightness(brightness)</code> : Set Brightness    
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`brightness` : brightness (0~255)    
+&emsp;&emsp;&emsp;`brightness` : Brightness (0~255)    
   
-&emsp;<code class="code_accent">setColorInvert(invert)</code> : inver color. default `False`    
+&emsp;<code class="code_accent">setColorInvert(invert)</code> : Invert the color. Default `False`    
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`invert`  
 &emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
@@ -752,19 +752,19 @@ from pop import *
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">clear()</code> : Clear Textlcd. It make Textlcd became empty.  
+&emsp;<code class="code_accent">clear()</code> : Clear Textlcd. It makes Textlcd empty.  
 &emsp;<code class="code_accent">returnHome()</code> : Move cursor to (0, 0).  
 &emsp;<code class="code_accent">displayOn()</code> : Turn on the display. The display is turned on at first.  
-&emsp;<code class="code_accent">displayOff()</code> : Turn off the display. Turned off display is not working.  
+&emsp;<code class="code_accent">displayOff()</code> : Turn off the display. The display is not working.  
 &emsp;<code class="code_accent">displayShiftR()</code> : Shift the display to right.  
 &emsp;<code class="code_accent">displayShiftL()</code> : Shift the display to left.  
 &emsp;<code class="code_accent">cursorShiftR()</code> : Shift cursor to right.  
 &emsp;<code class="code_accent">cursorShiftL()</code> : Shift cursor to left.  
-&emsp;<code class="code_accent">entryModeSet()</code> : Set Entry Mode.  
+&emsp;<code class="code_accent">entryModeSet()</code> : ...  
 &emsp;<code class="code_accent">cursorOff()</code> : Turn off cursor.  
-&emsp;<code class="code_accent">cursorOn(blink)</code> : Turn on cursor.<br>
+&emsp;<code class="code_accent">cursorOn(blinking)</code> : Turn on cursor.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blink` : If True, cursor is blinking. Else False, cursor is always on. Default is False    
+&emsp;&emsp;&emsp;`blinking` : If True, cursor is blinking. Else False, cursor is always on.    
 
 &emsp;<code class="code_accent">command(command)</code> : Send the command to TextLcd<br>
 &emsp;&emsp;**Params**   
@@ -790,12 +790,9 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Mpu6050(addr=MPU6050_ADDR)</code> <br>&emsp;: Mpu6050 object<br>
+&emsp;<code class="code_accent">Mpu6050(addr)</code> <br>&emsp;: Mpu6050 object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`addr` : I2c slave address. Default is MPU6050_ADDR (0x68).    
-
-&emsp;**Definitions**    
-&emsp;<code class="code_accent">MPU6050_ADDR</code> : Mpu6050 I2C slave address. Value is 0x68   
+&emsp;&emsp;&emsp;`addr` : I2c slave address    
 
 &emsp;**Variables**    
 &emsp;<code class="code_accent">accelRawX</code> : Raw accel data of X axis.    

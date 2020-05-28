@@ -239,7 +239,7 @@ from pop import *
 
 &emsp;<code class="code_accent">calibration(rl=4.7, clean=1)</code> : return calibration value for r0<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`rl` : register in circuit    
+&emsp;&emsp;&emsp;`rl` : register(k ohm) in circuit. default 4.7(k ohm)   
 &emsp;&emsp;&emsp;`clean` : value for calibration in clean air    
 
 &emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : set PropanCurve<br>
@@ -275,7 +275,7 @@ from pop import *
 &emsp;<code class="code_accent">resistanceCalculation(val, rl=4.7)</code> : return resistance of gas sensor<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : raw ADC value    
-&emsp;&emsp;&emsp;`rl` : register in circuit
+&emsp;&emsp;&emsp;`rl` : register(k ohm) in circuit. default 4.7(k ohm) 
 
 ---
 

@@ -242,19 +242,19 @@ from pop import *
 &emsp;&emsp;&emsp;`rl` : register in circuit    
 &emsp;&emsp;&emsp;`clean` : value for calibration in clean air    
 
-&emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : setPropanCurve<br>
+&emsp;<code class="code_accent">setPropanCurve(x, y, inclination)</code> : set PropanCurve<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`x` : any x-axis at PropanCurve in datasheet 
+&emsp;&emsp;&emsp;`x` : any x-axis at PropanCurve in datasheet    
 &emsp;&emsp;&emsp;`y` : any y-axis at PropanCurve in datasheet    
 &emsp;&emsp;&emsp;`inclination` : inclination at PropanCurve in datasheet   
 
-&emsp;<code class="code_accent">setMethanCurve(x, y, inclination)</code> : setMethanCurve<br>
+&emsp;<code class="code_accent">setMethanCurve(x, y, inclination)</code> : set MethanCurve<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : any x-axis at MethanCurve in datasheet    
 &emsp;&emsp;&emsp;`y` : any y-axis at MethanCurve in datasheet    
 &emsp;&emsp;&emsp;`inclination` : inclination at MethanCurve in datasheet    
 
-&emsp;<code class="code_accent">setEthanolCurve(x, y, inclination)</code> : setEthanolCurve<br>
+&emsp;<code class="code_accent">setEthanolCurve(x, y, inclination)</code> : set EthanolCurve<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`x` : any x-axis at EthanolCurve in datasheet    
 &emsp;&emsp;&emsp;`y` : any y-axis at EthanolCurve in datasheet    

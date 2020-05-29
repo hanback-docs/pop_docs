@@ -396,38 +396,38 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">read()</code> : ...
-&emsp;<code class="code_accent">readByte(reg)</code> : ...<br>
+&emsp;<code class="code_accent">read()</code> : Read 1byte data from slave.
+&emsp;<code class="code_accent">readByte(reg)</code> : Read 1byte data from register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
 
-&emsp;<code class="code_accent">readWord(reg)</code> : ...<br>
+&emsp;<code class="code_accent">readWord(reg)</code> : Read 2bytes data from register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
 
-&emsp;<code class="code_accent">readBlock(reg, length)</code> : ...<br>
+&emsp;<code class="code_accent">readBlock(reg, length)</code> : Read a block of data from register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`length` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
+&emsp;&emsp;&emsp;`length` : Length of data to read. Unit is byte.    
 
-&emsp;<code class="code_accent">write(data)</code> : ...<br>
+&emsp;<code class="code_accent">write(data)</code> : Write 1byte data to slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`data` : 1byte data to write.    
 
-&emsp;<code class="code_accent">writeByte(reg, data)</code> : ...<br>
+&emsp;<code class="code_accent">writeByte(reg, data)</code> : Write 1byte data to register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
+&emsp;&emsp;&emsp;`data` : 1byte data to write.    
 
-&emsp;<code class="code_accent">writeWord(reg, data)</code> : ...<br>
+&emsp;<code class="code_accent">writeWord(reg, data)</code> : Write 2bytes data to register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
+&emsp;&emsp;&emsp;`data` : 2bytes data to write. (int type)    
 
-&emsp;<code class="code_accent">writeBlock(reg, data)</code> :....<br>
+&emsp;<code class="code_accent">writeBlock(reg, data)</code> : Write a block of data to register of slave.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register address of slave.    
+&emsp;&emsp;&emsp;`data` : A block of data to write. (list type)    
 
 ---
 

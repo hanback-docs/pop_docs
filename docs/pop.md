@@ -436,12 +436,12 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">TempHumi()</code> : ... <br>
+&emsp;<code class="code_accent">TempHumi()</code> : Temperature, Humidity class <br>
 			
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">readTemp()</code> : ...  
-&emsp;<code class="code_accent">readHumi()</code> : ...  
+&emsp;<code class="code_accent">readTemp()</code> : Return calculated and calibrated celsius(°C) temperature. (float type)  
+&emsp;<code class="code_accent">readHumi()</code> : Return calculated and calibrated humidity. (float type)  
 
 ---
 

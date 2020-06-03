@@ -1,6 +1,6 @@
 <h1> Pop.Pilot </h1>
-Pop.Pilot is an easy and fast training library for robot control. 
-This library can control the front wheels of two and four wheel drive vehicles with steering control. 
+Pop.Pilot is an easy and fast training library for robot control.  
+This library can control the front wheels of two and four wheel drive vehicles with steering control.  
 In addition, it provides functions such as object tracking and collision avoidance using a camera.
 <br>
 
@@ -51,11 +51,11 @@ from pop.Pilot import AutoCar
 
 &emsp;<code class="code_accent">getAccel(axis=None)</code> : Return the accel value through the sensor mounted on the AutoCar.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the accel value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter 'x' or 'y' or 'z' to return the accel value of the axis. Return all if there is no input.   
 
 &emsp;<code class="code_accent">getGyro(axis=None)</code> : Return the gyro value through the sensor mounted on the AutoCar.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the gyro value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter 'x' or 'y' or 'z' to return the gyro value of the axis. Return all if there is no input.   
 
 ---
 
@@ -76,7 +76,7 @@ from pop.Pilot import DataCollector
 &emsp;&emsp;&emsp;`seperator` : Enter the purpose of data collection. 'Collision_Avoid' or 'Track_Follow'   
 &emsp;&emsp;&emsp;`camera` : Camera class to utilize camera images.   
 &emsp;&emsp;&emsp;`auto_ready` : .   
-&emsp;&emsp;&emsp;`save_per_sec` : Amount of data stored per second .   
+&emsp;&emsp;&emsp;`save_per_sec` : Amount of data stored per second.   
 
 <h5>&emsp;Methods</h5>
 
@@ -168,13 +168,13 @@ from pop.Pilot import Object_Follow
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`path` : Path to model file.   
 
-&emsp;<code class="code_accent">show()</code> : .   
+&emsp;<code class="code_accent">show()</code> : Whether the execution result is expressed as a graphic element.   
 
-&emsp;<code class="code_accent">detect(image=None, index=None, show=True, callback=None)</code> : .   
+&emsp;<code class="code_accent">detect(image=None, index=None, show=True, callback=None)</code> : Recognize objects with the loaded model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`image` : .   
-&emsp;&emsp;&emsp;`index` : .   
-&emsp;&emsp;&emsp;`show` : .   
+&emsp;&emsp;&emsp;`image` : Direct image data to be recognized. Used to recognize data other than the camera image currently assigned to the class.   
+&emsp;&emsp;&emsp;`index` : You can specify which objects are recognized. If you do not enter an index, results are returned for all recognizable objects.   
+&emsp;&emsp;&emsp;`show` : Whether the execution result is expressed as a graphic element.   
 &emsp;&emsp;&emsp;`callback` : .   
 
 ---
@@ -264,10 +264,10 @@ from pop.Pilot import SerBot
 
 &emsp;<code class="code_accent">getAccel(axis=None)</code> : Return the accel value through the sensor mounted on the SerBot.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the accel value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter 'x' or 'y' or 'z' to return the accel value of the axis. Return all if there is no input.   
 
 &emsp;<code class="code_accent">getGyro(axis=None)</code> : Return the gyro value through the sensor mounted on the SerBot.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the gyro value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter 'x' or 'y' or 'z' to return the gyro value of the axis. Return all if there is no input.   
 
 ---

@@ -10,6 +10,8 @@ The Pop library is a high-level library that allows you to focus on ideas when d
 
 <h4>&emsp;  <code class="cyan_blue">AIoT AutoCAR</code></h4>
 
+<h4>&emsp;  <code class="cyan_blue">AIoT AutoCAR Prime</code></h4>
+
 <h4>&emsp;  <code class="cyan_blue">AIoT Home</code></h4>
 
 <h4>&emsp;  <code class="cyan_blue">AIoT SerBot</code></h4>

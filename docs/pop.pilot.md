@@ -1,5 +1,7 @@
 <h1> Pop.Pilot </h1>
-Pop.Pilot is an easy and fast training library for robot control. This library can control the front wheels of two and four wheel drive vehicles with steering control. In addition, it provides functions such as object tracking and collision avoidance using a camera.
+Pop.Pilot is an easy and fast training library for robot control. 
+This library can control the front wheels of two and four wheel drive vehicles with steering control. 
+In addition, it provides functions such as object tracking and collision avoidance using a camera.
 <br>
 
 <!-- # Class & Method Description-->
@@ -47,12 +49,12 @@ from pop.Pilot import AutoCar
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`value` : Specify a value between -30 and 200.   
 
-&emsp;<code class="code_accent">getAccel(axis=None)</code> : Return the acceleration value through the sensor mounted on the AutoCar.   
+&emsp;<code class="code_accent">getAccel(axis=None)</code> : Return the accel value through the sensor mounted on the AutoCar.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the acceleration value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the accel value of the axis. Return all if there is no input.   
 
-&emsp;<code class="code_accent">getGyro(axis=None)</code> : Return the gyroscope value through the sensor mounted on the AutoCar.   
+&emsp;<code class="code_accent">getGyro(axis=None)</code> : Return the gyro value through the sensor mounted on the AutoCar.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the acceleration value of the axis. Return all if there is no input.   
+&emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the gyro value of the axis. Return all if there is no input.   
 
 ---

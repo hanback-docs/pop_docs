@@ -824,7 +824,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Touch(addr)</code> <br>&emsp;: Touch object 
+&emsp;<code class="code_accent">Touch(addr)</code> <br>&emsp;: Touch object<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x5a    
 
@@ -845,7 +845,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Dust(addr)</code> <br>&emsp;: Dust object 
+&emsp;<code class="code_accent">Dust(addr)</code> <br>&emsp;: Dust object<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x28
 
@@ -870,7 +870,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">PwmController(addr)</code> <br>&emsp;: PwmController object 
+&emsp;<code class="code_accent">PwmController(addr)</code> <br>&emsp;: PwmController object <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x5e   
 

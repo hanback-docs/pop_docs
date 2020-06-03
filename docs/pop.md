@@ -847,7 +847,7 @@ from pop import *
 
 &emsp;<code class="code_accent">Dust(addr)</code> <br>&emsp;: Dust object 
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x28   
+&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x28
 
 <h5>&emsp;Methods</h5>  
 
@@ -858,10 +858,10 @@ from pop import *
 &emsp;**Variables**    
 &emsp;<code class="code_accent">pm_1p0_grimm</code> : Fine dust data read pm1.0 by grimm.    
 &emsp;<code class="code_accent">pm_2p5_grimm</code> : Fine dust data read pm2.5 by grimm.   
-&emsp;<code class="code_accent">pm_10_grimm</code> : Fine dust data read pm10 by grimm.
+&emsp;<code class="code_accent">pm_10_grimm</code> : Fine dust data read pm10 by grimm.   
 &emsp;<code class="code_accent">pm_1p0_tsi</code> : Fine dust data read pm1.0 by tsi.    
 &emsp;<code class="code_accent">pm_2p5_tsi</code> : Fine dust data read pm2.5 by tsi.   
-&emsp;<code class="code_accent">pm_10_tsi</code> : Fine dust data read pm10 by tsi.
+&emsp;<code class="code_accent">pm_10_tsi</code> : Fine dust data read pm10 by tsi.   
 
 ---
 

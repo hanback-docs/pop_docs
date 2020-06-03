@@ -385,7 +385,7 @@ from pop import *
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**I2c**</span>    
-<blockquote class="desc">I2c</blockquote>
+<blockquote class="desc">Class used when using I2C interface</blockquote>
 
 <h5>&emsp;Initialization</h5>   
 
@@ -396,48 +396,52 @@ from pop import *
 			
 <h5>&emsp;Methods</h5>   
 
-&emsp;<code class="code_accent">read()</code> : ...
-&emsp;<code class="code_accent">readByte(reg)</code> : ...<br>
-&emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
+&emsp;<code class="code_accent">read()</code> : Read 1byte data.
 
-&emsp;<code class="code_accent">readWord(reg)</code> : ...<br>
+&emsp;<code class="code_accent">readByte(reg)</code> : Read 1byte data from register of chip connected through I2C.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.    
 
-&emsp;<code class="code_accent">readBlock(reg, length)</code> : ...<br>
+&emsp;<code class="code_accent">readWord(reg)</code> : Read 1word data from register of chip connected through I2C.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`length` : ...    
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.    
 
-&emsp;<code class="code_accent">write(data)</code> : ...<br>
+&emsp;<code class="code_accent">readBlock(reg, length)</code> : Read block data from register of chip connected through I2C.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.    
+&emsp;&emsp;&emsp;`length` : Length of block to read. In case of length is 4, 4-byte data is read.     
 
-&emsp;<code class="code_accent">writeByte(reg, data)</code> : ...<br>
+&emsp;<code class="code_accent">write(data)</code> : Write 1byte data<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`data` : Data to write to the chip.    
 
-&emsp;<code class="code_accent">writeWord(reg, data)</code> : ...<br>
+&emsp;<code class="code_accent">writeByte(reg, data)</code> : Write 1byte data from the chip register connected through I2C.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.  
+&emsp;&emsp;&emsp;`data` : Data to write to the chip.    
 
-&emsp;<code class="code_accent">writeBlock(reg, data)</code> :....<br>
+&emsp;<code class="code_accent">writeWord(reg, data)</code> : Write 1word data from the chip register connected through I2C.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`reg` : ...    
-&emsp;&emsp;&emsp;`data` : ...    
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.  
+&emsp;&emsp;&emsp;`data` : Data to write to the chip.    
+
+&emsp;<code class="code_accent">writeBlock(reg, data)</code> : Write block data from the chip register connected through I2C.<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`reg` : Register Address. Please refer to the datasheet of the I2C chip.  
+&emsp;&emsp;&emsp;`data` : Data to write to the chip.    
 
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**TempHumi**</span>    
-<blockquote class="desc">Temperature & Humidity</blockquote>
+<blockquote class="desc">Temperature & Humidity Sensor using I2C Interface</blockquote>
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">TempHumi()</code> : ... <br>
-			
+&emsp;<code class="code_accent">TempHumi(addr=0x77, debug=False)</code> : TempHumi Object <br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : I2c Address. default 0x77     
+&emsp;&emsp;&emsp;`debug` : Debug Mode. default False   
+
 <h5>&emsp;Methods</h5>   
 
 &emsp;<code class="code_accent">readTemp()</code> : ...  
@@ -792,7 +796,7 @@ from pop import *
 
 &emsp;<code class="code_accent">Mpu6050(addr)</code> <br>&emsp;: Mpu6050 object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`addr` : I2c slave address    
+&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x68    
 
 &emsp;**Variables**    
 &emsp;<code class="code_accent">accelRawX</code> : Raw accel data of X axis.    
@@ -820,11 +824,19 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Touch()</code> <br>&emsp;: Touch object 
+&emsp;<code class="code_accent">Touch(addr)</code> <br>&emsp;: Touch object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x5a    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">read()</code> : ...  
+&emsp;<code class="code_accent">reset()</code> : Software reset for Touch Sensor.   
+
+&emsp;<code class="code_accent">readAll()</code> : Read all channels included in Touch at once. 
+
+&emsp;<code class="code_accent">readChannel(ch)</code> : Read one channel of Touch.  
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`ch` : channel value. (0 ~ 11)    
 
 ---
 
@@ -833,11 +845,23 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">Dust()</code> <br>&emsp;: Dust object 
+&emsp;<code class="code_accent">Dust(addr)</code> <br>&emsp;: Dust object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x28   
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">read()</code> : ...  
+&emsp;<code class="code_accent">reset()</code> : Software reset for Dust Sensor.     
+
+&emsp;<code class="code_accent">read()</code> : Read all sensor data that can be read by the dust sensor.  
+
+&emsp;**Variables**    
+&emsp;<code class="code_accent">pm_1p0_grimm</code> : Fine dust data read pm1.0 by grimm.    
+&emsp;<code class="code_accent">pm_2p5_grimm</code> : Fine dust data read pm2.5 by grimm.   
+&emsp;<code class="code_accent">pm_10_grimm</code> : Fine dust data read pm10 by grimm.
+&emsp;<code class="code_accent">pm_1p0_tsi</code> : Fine dust data read pm1.0 by tsi.    
+&emsp;<code class="code_accent">pm_2p5_tsi</code> : Fine dust data read pm2.5 by tsi.   
+&emsp;<code class="code_accent">pm_10_tsi</code> : Fine dust data read pm10 by tsi.
 
 ---
 
@@ -846,23 +870,27 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">PwmController()</code> <br>&emsp;: PwmController object 
+&emsp;<code class="code_accent">PwmController(addr)</code> <br>&emsp;: PwmController object 
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`addr` : I2c slave address. default 0x5e   
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">setChannel(channel)</code> : ...<br>
-&emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`channel` : ...    
+&emsp;<code class="code_accent">init()</code> : initialize PwmController.<br>
 
-&emsp;<code class="code_accent">setDuty(percent)</code> : ...<br>
+&emsp;<code class="code_accent">setChannel(channel)</code> : Set the PWM Channel for control<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`percent` : ...    
+&emsp;&emsp;&emsp;`channel` : channel value. (0 ~ 15)    
 
-&emsp;<code class="code_accent">setFreq(freq)</code> : ...<br>
+&emsp;<code class="code_accent">setDuty(percent)</code> : Specifies the duty cycle of pwm.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`freq` : ...    
+&emsp;&emsp;&emsp;`percent` : Specifies the duty ratio as a percentage. (0 ~ 100)    
 
-&emsp;<code class="code_accent">setInvertPulse()</code> : ...  
+&emsp;<code class="code_accent">setFreq(freq)</code> : Specifies the pwm frequency.<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`freq` : Frequency. ex) 50 -> 50Hz     
+
+&emsp;<code class="code_accent">setInvertPulse()</code> : Invert the output PWM signal.  
 
 ---
 

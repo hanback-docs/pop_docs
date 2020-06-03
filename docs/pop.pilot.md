@@ -9,7 +9,7 @@ In addition, it provides functions such as object tracking and collision avoidan
 
 ## <span class="title">Class</span> <span class="title_accent">**AutoCar**</span>    
 
-<blockquote class="desc">Class for easy control of AIoT AutoCar.</blockquote>
+<blockquote class="desc">Class for easy control of AIoT AutoCar and AIoT AutoCar Prime.</blockquote>
 
 The code to import the AutoCar Class :
 
@@ -59,38 +59,38 @@ from pop.Pilot import AutoCar
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**DataCollector**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Data_Collector**</span>    
 
 <blockquote class="desc">Image data collection class for machine learning.</blockquote>
 
-The code to import the DataCollector Class :
+The code to import the Data_Collector Class :
 
 ``` python
-from pop.Pilot import DataCollector
+from pop.Pilot import Data_Collector
 ```
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">DataColletor(separator, camera=None, auto_ready=True, save_per_sec=5)</code> : DataCollector Object<br>
+&emsp;<code class="code_accent">Data_Collector(separator, camera=None, auto_ready=True, save_per_sec=5)</code> : Data_Collector Object<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`seperator` : Enter the purpose of data collection. 'Collision_Avoid' or 'Track_Follow'   
 &emsp;&emsp;&emsp;`camera` : Camera class to utilize camera images.   
-&emsp;&emsp;&emsp;`auto_ready` : .   
+&emsp;&emsp;&emsp;`auto_ready` : Set whether to automatically configure a GUI screen to assist data collection.   
 &emsp;&emsp;&emsp;`save_per_sec` : Amount of data stored per second.   
 
 <h5>&emsp;Methods</h5>
 
 &emsp;<code class="code_accent">show()</code> : GUI display for data collection.   
 
-&emsp;<code class="code_accent">ready()</code> : .   
+&emsp;<code class="code_accent">ready()</code> : Construct a GUI screen to assist data collection. It is configured according to Collision Avoid or Track Follow..   
 
 &emsp;<code class="code_accent">save_as_joystick(value)</code> : Save the image using the joystick. Only use for Track Follow.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`value` : .   
+&emsp;&emsp;&emsp;`value` : This is a list containing 'sep', 'x', 'y'.   
 
 &emsp;<code class="code_accent">control_as_joystick(value)</code> : Use the joystick to control the robot. Only use for Collision Avoid.  
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`value` : .   
+&emsp;&emsp;&emsp;`value` : This is a list containing 'sep', 'x', 'y'.   
 
 &emsp;<code class="code_accent">save_blocked()</code> : Save the block image file in the specified path. Only use for Collision Avoid. default save path "./collision_dataset/blocked".  
 
@@ -141,8 +141,8 @@ from pop.Pilot import Collision_Avoid
 
 &emsp;<code class="code_accent">run(value=None, callback=None)</code> : Output the predicted value of the model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`value` : .   
-&emsp;&emsp;&emsp;`callback` : .   
+&emsp;&emsp;&emsp;`value` : Direct image data to be recognized. Used to recognize data other than the camera image currently assigned to the class.   
+&emsp;&emsp;&emsp;`callback` : Callback method to process by passing the result value.   
 
 ---
 
@@ -175,7 +175,7 @@ from pop.Pilot import Object_Follow
 &emsp;&emsp;&emsp;`image` : Direct image data to be recognized. Used to recognize data other than the camera image currently assigned to the class.   
 &emsp;&emsp;&emsp;`index` : You can specify which objects are recognized. If you do not enter an index, results are returned for all recognizable objects.   
 &emsp;&emsp;&emsp;`show` : Whether the execution result is expressed as a graphic element.   
-&emsp;&emsp;&emsp;`callback` : .   
+&emsp;&emsp;&emsp;`callback` : Callback method to process by passing the result value.   
 
 ---
 
@@ -210,8 +210,8 @@ from pop.Pilot import Track_Follow
 
 &emsp;<code class="code_accent">run(value=None, callback=None)</code> : Output the predicted value of the model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`value` : .   
-&emsp;&emsp;&emsp;`callback` : .   
+&emsp;&emsp;&emsp;`value` : Direct image data to be recognized. Used to recognize data other than the camera image currently assigned to the class.   
+&emsp;&emsp;&emsp;`callback` : Callback method to process by passing the result value.   
 
 &emsp;<code class="code_accent">load_model(path=MODEL_PATH)</code> : Load the saved model.   
 &emsp;&emsp;**Params**    

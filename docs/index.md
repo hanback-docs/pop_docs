@@ -6,16 +6,16 @@ While possible, implementing complex systems by connecting multiple devices requ
 
 The Pop library is a high-level library that allows you to focus on ideas when designing complex systems.
 
-## Devices supported by the Pop library
+<h2> Devices supported by the Pop library </h2>
 
-<span class="title_accent">**IoT Server Plus**</span>
+<h4>&emsp;<span class="title_accent">  IoT Server Plus</span></h4>
 
-<span class="title_accent">**AIoT Server Plus**</span>
+<h4>&emsp;<span class="title_accent">  AIoT Server Plus</span></h4>
 
-<span class="title_accent">**AIoT AutoCAR**</span>
+<h4>&emsp;<span class="title_accent">  AIoT AutoCAR</span></h4>
 
-<span class="title_accent">**AIoT Home**</span>
+<h4>&emsp;<span class="title_accent">  AIoT Home</span></h4>
 
-<span class="title_accent">**AIoT SerBot**</span>
+<h4>&emsp;<span class="title_accent">  AIoT SerBot</span></h4>
 
-<span class="title_accent">**PyCBasic**</span>
+<h4>&emsp;<span class="title_accent">  PyCBasic</span></h4>

@@ -8,14 +8,14 @@ The Pop library is a high-level library that allows you to focus on ideas when d
 
 <h2> Devices supported by the Pop library </h2>
 
-<h4>&emsp;  AIoT AutoCAR</h4>
+<h4>&emsp;  <code class="cyan_blue">AIoT AutoCAR</code></h4>
 
-<h4>&emsp;  AIoT Home</h4>
+<h4>&emsp;  <code class="cyan_blue">AIoT Home</code></h4>
 
-<h4>&emsp;  AIoT SerBot</h4>
+<h4>&emsp;  <code class="cyan_blue">AIoT SerBot</code></h4>
 
-<h4>&emsp;  AIoT Server Plus</h4>
+<h4>&emsp;  <code class="cyan_blue">AIoT Server Plus</code></h4>
 
-<h4>&emsp;  IoT Server Plus</h4>
+<h4>&emsp;  <code class="cyan_blue">IoT Server Plus</code></h4>
 
-<h4>&emsp;  PyCBasic</h4>
+<h4>&emsp;  <code class="cyan_blue">PyCBasic</code></h4>

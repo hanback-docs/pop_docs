@@ -58,3 +58,46 @@ from pop.Pilot import AutoCar
 &emsp;&emsp;&emsp;`axis` : Enter'x' or'y' or'z' to return the gyro value of the axis. Return all if there is no input.   
 
 ---
+
+## <span class="title">Class</span> <span class="title_accent">**DataCollector**</span>    
+
+<blockquote class="desc">Image data collection class for machine learning.</blockquote>
+
+The code to import the DataCollector Class :
+
+``` python
+from pop.Pilot import DataCollector
+```
+
+<h5>&emsp;Initialization</h5>
+
+&emsp;<code class="code_accent">DataColletor(separator, camera=None, auto_ready=True, save_per_sec=5)</code> : DataCollector Object<br>
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`seperator` : Enter the purpose of data collection. 'Collision_Avoid' or 'Track_Follow'   
+&emsp;&emsp;&emsp;`camera` : Camera class to utilize camera images.   
+&emsp;&emsp;&emsp;`auto_ready` : .   
+&emsp;&emsp;&emsp;`save_per_sec` : .   
+
+<h5>&emsp;Methods</h5>
+
+&emsp;<code class="code_accent">show()</code> : GUI display for data collection.   
+
+&emsp;<code class="code_accent">ready()</code> : .   
+
+&emsp;<code class="code_accent">save_as_joystick(value)</code> : .   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : .   
+
+&emsp;<code class="code_accent">control_as_joystick(value)</code> : .   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : .   
+
+&emsp;<code class="code_accent">save_blocked()</code> : .   
+
+&emsp;<code class="code_accent">save_free()</code> : .   
+
+&emsp;<code class="code_accent">save_snapshot(directory)</code> : .   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`directory` : .   
+
+---

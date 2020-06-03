@@ -1,5 +1,5 @@
 <h1> Pop.AI </h1>
-Pop.AI is easy and fast education Library for artificial intelligence. This Librariy supported Linear Regression, Logistic Regression, Perceptron, Artificial Neural Network(ANN), Deep Neural Network(DNN), Convolutional Neural Network(CNN) and Deep Q-Network(DQN).
+Pop.AI is easy and fast educational Library for artificial intelligence. This Library supports Linear Regression, Logistic Regression, Perceptron, Artificial Neural Network(ANN), Deep Neural Network(DNN), Convolutional Neural Network(CNN) and Deep Q-Network(DQN).
 <br>
 
 <!-- # Class & Method Description-->

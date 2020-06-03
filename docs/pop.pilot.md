@@ -76,7 +76,7 @@ from pop.Pilot import DataCollector
 &emsp;&emsp;&emsp;`seperator` : Enter the purpose of data collection. 'Collision_Avoid' or 'Track_Follow'   
 &emsp;&emsp;&emsp;`camera` : Camera class to utilize camera images.   
 &emsp;&emsp;&emsp;`auto_ready` : .   
-&emsp;&emsp;&emsp;`save_per_sec` : .   
+&emsp;&emsp;&emsp;`save_per_sec` : Amount of data stored per second .   
 
 <h5>&emsp;Methods</h5>
 
@@ -84,21 +84,21 @@ from pop.Pilot import DataCollector
 
 &emsp;<code class="code_accent">ready()</code> : .   
 
-&emsp;<code class="code_accent">save_as_joystick(value)</code> : .   
+&emsp;<code class="code_accent">save_as_joystick(value)</code> : Save the image using the joystick. Only use for Track Follow.   
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`value` : .   
 
-&emsp;<code class="code_accent">control_as_joystick(value)</code> : .   
+&emsp;<code class="code_accent">control_as_joystick(value)</code> : Use the joystick to control the robot. Only use for Collision Avoid.  
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`value` : .   
 
-&emsp;<code class="code_accent">save_blocked()</code> : .   
+&emsp;<code class="code_accent">save_blocked()</code> : Save the block image file in the specified path. Only use for Collision Avoid. default save path "./collision_dataset/blocked".  
 
-&emsp;<code class="code_accent">save_free()</code> : .   
+&emsp;<code class="code_accent">save_free()</code> : Save the free image file in the specified path. Only use for Collision Avoid. default save path "./collision_dataset/free".   
 
-&emsp;<code class="code_accent">save_snapshot(directory)</code> : .   
+&emsp;<code class="code_accent">save_snapshot(directory)</code> : Save the image file in the specified path. Only use for Collision Avoid.  
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`directory` : .   
+&emsp;&emsp;&emsp;`directory` : Path to save image file.   
 
 ---
 
@@ -120,26 +120,26 @@ from pop.Pilot import Collision_Avoid
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">load_datasets(path=dataset_path)</code> : .   
+&emsp;<code class="code_accent">load_datasets(path=dataset_path)</code> : Load the previously collected dataset.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`load_datasets` : .   
+&emsp;&emsp;&emsp;`load_datasets` : Path of pre-collected dataset. default path "./collision_dataset"   
 
-&emsp;<code class="code_accent">train(times=5, autosave=True)</code> : .   
+&emsp;<code class="code_accent">train(times=5, autosave=True)</code> : Train through the loaded dataset.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`time` : .   
-&emsp;&emsp;&emsp;`autosave` : .   
+&emsp;&emsp;&emsp;`time` : Learning count.   
+&emsp;&emsp;&emsp;`autosave` : Whether to automatically save after learning.   
 
-&emsp;<code class="code_accent">load_model(path=MODEL_PATH)</code> : .   
+&emsp;<code class="code_accent">load_model(path=MODEL_PATH)</code> : Load the saved model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path to model file.   
 
-&emsp;<code class="code_accent">save_model(path=MODEL_PATH)</code> : .   
+&emsp;<code class="code_accent">save_model(path=MODEL_PATH)</code> : Save the model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path to model file.   
 
-&emsp;<code class="code_accent">show()</code> : .   
+&emsp;<code class="code_accent">show()</code> : The camera screen and model prediction values are displayed on the screen.   
 
-&emsp;<code class="code_accent">run(value=None, callback=None)</code> : .   
+&emsp;<code class="code_accent">run(value=None, callback=None)</code> : Output the predicted value of the model.   
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`value` : .   
 &emsp;&emsp;&emsp;`callback` : .   
@@ -164,9 +164,9 @@ from pop.Pilot import Object_Follow
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">load_model(path='ssd_mobilenet_v2_coco.engine')</code> : .   
+&emsp;<code class="code_accent">load_model(path='ssd_mobilenet_v2_coco.engine')</code> : Load the saved model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path to model file.   
 
 &emsp;<code class="code_accent">show()</code> : .   
 
@@ -197,33 +197,29 @@ from pop.Pilot import Track_Follow
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">load_datasets(path=dataset_path)</code> : .   
+&emsp;<code class="code_accent">load_datasets(path=dataset_path)</code> : Load the previously collected dataset.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path of pre-collected dataset. default path "./track_dataset".   
 
-&emsp;<code class="code_accent">trin(time=5, autosave=True)</code> : .   
+&emsp;<code class="code_accent">train(time=5, autosave=True)</code> : Train through the loaded dataset.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`time` : .   
-&emsp;&emsp;&emsp;`autosave` : .   
+&emsp;&emsp;&emsp;`time` : Learning count.   
+&emsp;&emsp;&emsp;`autosave` : Whether to automatically save after learning.   
 
-&emsp;<code class="code_accent">load_model(path='ssd_mobilenet_v2_coco.engine')</code> : .   
-&emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;<code class="code_accent">show()</code> : The camera screen and model prediction values are displayed on the screen.   
 
-&emsp;<code class="code_accent">show()</code> : .   
-
-&emsp;<code class="code_accent">run(value=None, callback=None)</code> : .   
+&emsp;<code class="code_accent">run(value=None, callback=None)</code> : Output the predicted value of the model.   
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`value` : .   
 &emsp;&emsp;&emsp;`callback` : .   
 
-&emsp;<code class="code_accent">load_model(path=MODEL_PATH)</code> : .   
+&emsp;<code class="code_accent">load_model(path=MODEL_PATH)</code> : Load the saved model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path to model file.   
 
-&emsp;<code class="code_accent">save_model(path=MODEL_PATH)</code> : .   
+&emsp;<code class="code_accent">save_model(path=MODEL_PATH)</code> : Save the model.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : .   
+&emsp;&emsp;&emsp;`path` : Path to model file.   
 
 ---
 

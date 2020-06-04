@@ -15,6 +15,7 @@ nav:
     - Home: index.md
     - Pop : pop.md
     - Pop.AI : pop.ai.md
+    - Pop.Pilot : pop.pilot.md
     
 highlightjs: true
 hljs_languages: [python, cpp, java, javascript]

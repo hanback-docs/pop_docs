@@ -924,19 +924,19 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">ShiftRegister(*ns)</code> <br>&emsp;: ShiftRegister object <br>
+&emsp;<code class="code_accent">ShiftRegister([n0,n1,n2])</code> <br>&emsp;: ShiftRegister object <br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`*ns` : ...    
+&emsp;&emsp;&emsp;`[n0,n1,n2]` : List of GPIO numbers connected to Shift Register. n0-Data / n1-Clock / n2-Latch    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">shiftout(val)</code> : ...<br>
+&emsp;<code class="code_accent">shiftout(val)</code> : Write data to Shift Rgister<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : 8-bit data to be transferred to Shift Register    
 
-&emsp;<code class="code_accent">fnd(val)</code> : ...<br>
+&emsp;<code class="code_accent">fnd(val)</code> : Write data to Shift Rgister for control FND<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : number to be show on FND. range from '0' to '9'    
 
 ---
 

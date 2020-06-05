@@ -1056,27 +1056,27 @@ from pop import *
 
 &emsp;<code class="code_accent">Tone(tempo=100, volume=.5, rate=48000, channels=1)</code> <br>&emsp;: Tone object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`tempo` : ...    
-&emsp;&emsp;&emsp;`volume` : ...    
-&emsp;&emsp;&emsp;`rate` : ...    
-&emsp;&emsp;&emsp;`channels` : ...    
+&emsp;&emsp;&emsp;`tempo` : Tempo of melody. Default is 100.    
+&emsp;&emsp;&emsp;`volume` : Volume of meldy. Default is 0.5. (0 ~ 1)    
+&emsp;&emsp;&emsp;`rate` : Sampling rate(Hz). Default is 48000.    
+&emsp;&emsp;&emsp;`channels` : Number of channels. Default is 1.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">close()</code> : ...  
-&emsp;<code class="code_accent">setTempo(tempo)</code> : ...<br>
+&emsp;<code class="code_accent">close()</code> : Clear audio resources explicitly.   
+&emsp;<code class="code_accent">setTempo(tempo)</code> : Set the tempo of melody.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`tempo` : ...    
+&emsp;&emsp;&emsp;`tempo` : Value of tempo.    
 
-&emsp;<code class="code_accent">rest(duration)</code> : ...<br>
+&emsp;<code class="code_accent">rest(duration)</code> : Intervals of silence.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`duration` : ...    
+&emsp;&emsp;&emsp;`duration` : Duration of silence. (4, 2, 1, 1/2, 1/4, ...)    
 
-&emsp;<code class="code_accent">play(octave, pitch, duration)</code> : ...<br>
+&emsp;<code class="code_accent">play(octave, pitch, duration)</code> : Play the melody.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`octave` : ...    
-&emsp;&emsp;&emsp;`pitch` : ...    
-&emsp;&emsp;&emsp;`duration` : ...    
+&emsp;&emsp;&emsp;`octave` : Octave of melody. (1 ~ 8)    
+&emsp;&emsp;&emsp;`pitch` : Pitch of melody. ("DO", "DO#", "RE", "RE#", "MI", "FA", "SOL", "SOL#", "RA", "RA#", "SI")    
+&emsp;&emsp;&emsp;`duration` : Duration of melody.    
 
 ---
 
@@ -1087,15 +1087,15 @@ from pop import *
 
 &emsp;<code class="code_accent">SoundMeter(sampleFormat=pyaudio.paInt16, channelNums=1, framesPerBuffer=1024, sampleRate=48000)</code> <br>&emsp;: SoundMeter object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`sampleFormat` : ...    
-&emsp;&emsp;&emsp;`channelNums` : ...    
-&emsp;&emsp;&emsp;`framesPerBuffer` : ...    
-&emsp;&emsp;&emsp;`sampleRate` : ...    
+&emsp;&emsp;&emsp;`sampleFormat` : Sampling type. Default is pyaudio.paInt16.    
+&emsp;&emsp;&emsp;`channelNums` : Number of channel. Default is 1.    
+&emsp;&emsp;&emsp;`framesPerBuffer` : Frame per buffer. Default 1024.    
+&emsp;&emsp;&emsp;`sampleRate` : Sampling rate(Hz). Default is 48000.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">stop()</code> : ...  
-&emsp;<code class="code_accent">setCallback(func, *args)</code> : ...<br>
+&emsp;<code class="code_accent">stop()</code> : Stop measurement and clear audio resources explicitly.    
+&emsp;<code class="code_accent">setCallback(func, *args)</code> : Set user callback method and start measurement.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`func` : ...    
-&emsp;&emsp;&emsp;`*args` : ...    
+&emsp;&emsp;&emsp;`func` : User callback method.    
+&emsp;&emsp;&emsp;`*args` : Argument to be conveyed to user callback method. (skippable)    

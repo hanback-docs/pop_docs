@@ -934,9 +934,9 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : 8-bit data to be transferred to Shift Register    
 
-&emsp;<code class="code_accent">fnd(val)</code> : ...<br>
+&emsp;<code class="code_accent">fnd(val)</code> : Write data to Shift Rgister for control FND<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`val` : ...    
+&emsp;&emsp;&emsp;`val` : number to be show on FND. range from '0' to '9'    
 
 ---
 

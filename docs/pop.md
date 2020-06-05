@@ -981,13 +981,13 @@ from pop import *
 
 &emsp;<code class="code_accent">Audio(blocking=True, cont=False)</code> <br>&emsp;: Audio object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blocking` : ...    
-&emsp;&emsp;&emsp;`cont` : ...    
+&emsp;&emsp;&emsp;`blocking` : If Ture, working in blocking mode. Else non-blocking mode. Default is True.    
+&emsp;&emsp;&emsp;`cont` : If True, repeat playing file. Else play one time. This is working in only non-blocking mode. Default is False.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">stop()</code> : ...  
-&emsp;<code class="code_accent">close()</code> : ...  
+&emsp;<code class="code_accent">stop()</code> : Stop playing if in non-blocking mode. This method is used in subclass like 'AudioPlay'.    
+&emsp;<code class="code_accent">close()</code> : Clear audio resources explicitly. This method is used in subclass like 'AudioPlay'.    
 
 ---
 
@@ -996,14 +996,17 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">AudioPlay()</code> <br>&emsp;: AudioPlay object<br>
+&emsp;<code class="code_accent">AudioPlay(file, blocking=True, cont=False)</code> <br>&emsp;: AudioPlay object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blocking` : ...    
-&emsp;&emsp;&emsp;`cont` : ...    
+&emsp;&emsp;&emsp;`file` : Name of WAV file to play.    
+&emsp;&emsp;&emsp;`blocking` : If Ture, working in blocking mode. Else non-blocking mode. Default is True.    
+&emsp;&emsp;&emsp;`cont` : If True, repeat playing file. Else play one time. This is working in only non-blocking mode. Default is False.    
+
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">run()</code> : ...  
+&emsp;<code class="code_accent">run()</code> : Start playing the file.    
+&emsp;<code class="code_accent">isPlay()</code> : Return playing status. True means playing now, False means stopped.    
 
 ---
 
@@ -1012,15 +1015,18 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">AudioPlayList(blocking=True, cont=False)</code> <br>&emsp;: AudioPlayList object<br>
+&emsp;<code class="code_accent">AudioPlayList(files, blocking=True, cont=False)</code> <br>&emsp;: AudioPlayList object<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`blocking` : ...    
-&emsp;&emsp;&emsp;`cont` : ...    
+&emsp;&emsp;&emsp;`files` : Names of WAV file to play. (list type)    
+&emsp;&emsp;&emsp;`blocking` : If Ture, working in blocking mode. Else non-blocking mode. Default is True.    
+&emsp;&emsp;&emsp;`cont` : If True, repeat playing file. Else play one time. This is working in only non-blocking mode. Default is False.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">run()</code> : ...  
-&emsp;<code class="code_accent">isPlay()</code> : ...  
+&emsp;<code class="code_accent">isPlay()</code> : Return playing status. True means playing now, False means stopped.    
+&emsp;<code class="code_accent">run(pos=0)</code> : Start playing the file.<br>
+&emsp;&emsp;**Params**   
+&emsp;&emsp;&emsp;`pos` : Index of WAV file in playing list. Default is 0.    
 
 ---
 
@@ -1029,17 +1035,17 @@ from pop import *
 
 <h5>&emsp;Initialization</h5> 
 
-&emsp;<code class="code_accent">AudioRecord(file, sFormat=8, sChannel=1, sRate=48000, sFramePerBuffer=1024)</code> <br>&emsp;: AudioRecord object<br>
+&emsp;<code class="code_accent">AudioRecord(file, sFormat=8, sChannel=1, sRate=48000, sFramePerBuffer=1024)</code> <br>&emsp;: AudioRecord object. Only non-blocking mode is supported.<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`file` : ...    
-&emsp;&emsp;&emsp;`sFormat` : ...    
-&emsp;&emsp;&emsp;`sChannel` : ...    
-&emsp;&emsp;&emsp;`sRate` : ...    
-&emsp;&emsp;&emsp;`sFramePerBuffer` : ...    
+&emsp;&emsp;&emsp;`file` : Name of WAV file to save.    
+&emsp;&emsp;&emsp;`sFormat` : Sampling type. 8 is paInt16, 2 is paInt32, 1 is pa Float32. Default is 8. (int type)    
+&emsp;&emsp;&emsp;`sChannel` : Number of channel. Default is 1.    
+&emsp;&emsp;&emsp;`sRate` : Sampling rate(Hz). Default is 48000.    
+&emsp;&emsp;&emsp;`sFramePerBuffer` : Frame per buffer. Default 1024.    
 
 <h5>&emsp;Methods</h5>  
 
-&emsp;<code class="code_accent">run()</code> : ...  
+&emsp;<code class="code_accent">run()</code> : Start recording.   
 
 ---
 

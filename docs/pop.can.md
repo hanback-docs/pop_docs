@@ -21,7 +21,7 @@ from pop.CAN import Can
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">send(msg_id, buf, is_extended=False)</code> : Sends a message via can communication. 
+&emsp;<code class="code_accent">send(msg_id, buf, is_extended=False)</code> : Sends a message via can communication.<br>   
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`msg_id` : Number of Message ID. 
 &emsp;&emsp;&emsp;`buf` : It is a message to be transmitted through can communication.  
@@ -69,15 +69,15 @@ from pop.CAN import OmniWheel
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">forward(data)</code> : 
+&emsp;<code class="code_accent">forward(data)</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`data` : 
 
-&emsp;<code class="code_accent">backward(data)</code> : 
+&emsp;<code class="code_accent">backward(data)</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`data` : 
 
-&emsp;<code class="code_accent">setObstacleDetect(distance)</code> : 
+&emsp;<code class="code_accent">setObstacleDetect(distance)</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`distance` : 
 
@@ -85,11 +85,11 @@ from pop.CAN import OmniWheel
 
 &emsp;<code class="code_accent">allSensorEnable()</code> : 
 
-&emsp;<code class="code_accent">ultraEnable(enable=[1,1,1,1,1,1])</code> : 
+&emsp;<code class="code_accent">ultraEnable(enable=[1,1,1,1,1,1])</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`enable` : 
 
-&emsp;<code class="code_accent">psdEnable(enable=[1,1,1])</code> : 
+&emsp;<code class="code_accent">psdEnable(enable=[1,1,1])</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`enable` : 
 
@@ -101,7 +101,7 @@ from pop.CAN import OmniWheel
 
 &emsp;<code class="code_accent">readStop()</code> : 
 
-&emsp;<code class="code_accent">read(sensorType)</code> : 
+&emsp;<code class="code_accent">read(sensorType)</code> : <br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`sensorType` : 
 

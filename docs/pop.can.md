@@ -7,88 +7,103 @@ Pop.CAN is easy and fast educational Library for CAN Protocol. It supports can c
 
 ## <span class="title">Class</span> <span class="title_accent">**Can**</span>    
 
-<blockquote class="desc">A simple Linear Regression class for one to one datasets.</blockquote>
+<blockquote class="desc">Class used whe using CAN interface.</blockquote>
 
-The code to import the Linear_Regression Class :
+The code to import the Can Class :
 
 ``` python
-from pop.AI import Linear_Regression
+from pop.CAN import Can
 ```
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Linear_Regression(restore=False, ckpt_name="linear_regression_models")</code> : Linear Regression Object<br>
-&emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
-&emsp;&emsp;&emsp;`ckpt_name` : Custom model name for saving and loading.
-
-<h5>&emsp;Variables</h5>  
-
-&emsp;<code class="code_accent">X_data</code> : Input data for training and prediction. It must be a 1-Dimensional Array. (ex, [0, 1, 2, 3])    
-&emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction. It must be a 1-Dimensional Array. (ex, [0, 2, 4, 6])     
+&emsp;<code class="code_accent">Can()</code> : Can Object<br>
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">train(times=100, print_every=10)</code> : Train datasets as Linear Regression.  
+&emsp;<code class="code_accent">send(msg_id, buf, is_extended=False)</code> : Sends a message via can communication. 
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`times` : Number of training. ( = Epochs )   
-&emsp;&emsp;&emsp;`print_every` : Training status printing cycle.  
+&emsp;&emsp;&emsp;`msg_id` : Number of Message ID. 
+&emsp;&emsp;&emsp;`buf` : It is a message to be transmitted through can communication.  
+&emsp;&emsp;&emsp;`is_extended=False` : Check if the set ID is extended id.  
 
-&emsp;<code class="code_accent">run(inputs=X_data)</code> : Predict as trained Linear Regression.   
+&emsp;<code class="code_accent">recv(timeOut=2)</code> : Recv a message via can communication.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`inputs` : Data to predict.   
+&emsp;&emsp;&emsp;`timeOut=2` : Time to wai for message.   
 
-&emsp;<code class="code_accent">save(path=ckpt_name)</code> : Save current model of this object.   
+&emsp;<code class="code_accent">setFilter(can_id, mask)</code> : Set the id filter for incoming messages.   
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : Path to save. 
-
-&emsp;<code class="code_accent">load(path=ckpt_name)</code> : Load a model in path.   
-&emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : Path to load. 
+&emsp;&emsp;&emsp;`can_id` : can message id. 
+&emsp;&emsp;&emsp;`mask` : can message id. 
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Logistic_Regression**</span>    
+## <span class="title">Class</span> <span class="title_accent">**OmniWheel**</span>    
 
-<blockquote class="desc">A simple Logistic Regression class for many to one datasets.</blockquote>
+<blockquote class="desc">This class controls OmniWheel using Can communication.</blockquote>
 
-The code to import the Logistic_Regression Class :
+The code to import the OmniWheel Class :
 
 ``` python
-from pop.AI import Logistic_Regression
+from pop.CAN import OmniWheel
 ```
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Logistic_Regression(input_size=1, restore=False, ckpt_name="logistic_regression_models")</code> : Logistic Regression Object<br>
-&emsp;&emsp;**Params**  
-&emsp;&emsp;&emsp;`input_size` : Size of one dataset input.   
-&emsp;&emsp;&emsp;`restore` : Load the recently trained model.   
-&emsp;&emsp;&emsp;`ckpt_name` : Custom model name for saving and loading.
+&emsp;<code class="code_accent">OmniWheel()</code> : OmniWheel Object<br>
 
 <h5>&emsp;Variables</h5>  
 
-&emsp;<code class="code_accent">X_data</code> : Input data for training and prediction. It must be a 2-Dimensional Array. (ex, [[0, 1], [3, 2]])      
-&emsp;<code class="code_accent">Y_data</code> : Result data for training and prediction. It must be a 2-Dimensional Array. (ex, [[0], [1]])       
+&emsp;<code class="code_accent">MOTOR_CONTROL</code> :      
+&emsp;<code class="code_accent">MOTOR_STOP</code> :      
+&emsp;<code class="code_accent">SENSOR_REQUEST</code> :      
+&emsp;<code class="code_accent">OBSTACLE_DISTANCE</code> :      
+&emsp;<code class="code_accent">OBSTACLE_DETECT</code> :      
+&emsp;<code class="code_accent">OBSTACLE_ALARM</code> :      
+&emsp;<code class="code_accent">RECV_ULTRASONIC</code> :      
+&emsp;<code class="code_accent">RECV_PSD</code> :      
+&emsp;<code class="code_accent">ULTRASONIC</code> :      
+&emsp;<code class="code_accent">PSD</code> :      
+&emsp;<code class="code_accent">ALARM</code> :      
+&emsp;<code class="code_accent">SENSOR_ALL</code> :      
 
 <h5>&emsp;Methods</h5>
 
-&emsp;<code class="code_accent">train(times=100, print_every=10)</code> : Train datasets as Logistic Regression.  
+&emsp;<code class="code_accent">forward(data)</code> : 
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`times` : Number of training. ( = Epochs )   
-&emsp;&emsp;&emsp;`print_every` : Training status printing cycle.  
+&emsp;&emsp;&emsp;`data` : 
 
-&emsp;<code class="code_accent">run(inputs=X_data)</code> : Predict as trained Logistic Regression.   
+&emsp;<code class="code_accent">backward(data)</code> : 
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`inputs` : Data to predict.   
+&emsp;&emsp;&emsp;`data` : 
 
-&emsp;<code class="code_accent">save(path=ckpt_name)</code> : Save current model of this object.   
+&emsp;<code class="code_accent">setObstacleDetect(distance)</code> : 
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : Path to save. 
+&emsp;&emsp;&emsp;`distance` : 
 
-&emsp;<code class="code_accent">load(path=ckpt_name)</code> : Load a model in path.   
+&emsp;<code class="code_accent">stop()</code> : 
+
+&emsp;<code class="code_accent">allSensorEnable()</code> : 
+
+&emsp;<code class="code_accent">ultraEnable(enable=[1,1,1,1,1,1])</code> : 
 &emsp;&emsp;**Params**    
-&emsp;&emsp;&emsp;`path` : Path to load. 
+&emsp;&emsp;&emsp;`enable` : 
+
+&emsp;<code class="code_accent">psdEnable(enable=[1,1,1])</code> : 
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`enable` : 
+
+&emsp;<code class="code_accent">getEnable()</code> : 
+
+&emsp;<code class="code_accent">sensorDisable()</code> : 
+
+&emsp;<code class="code_accent">readStart()</code> : 
+
+&emsp;<code class="code_accent">readStop()</code> : 
+
+&emsp;<code class="code_accent">read(sensorType)</code> : 
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`sensorType` : 
 
 ---
 

@@ -13,3 +13,6 @@
   - Updating Pop.AI
   - Updating Pop
   - Create Pop.Pilot
+
+## V1.2 (200727)
+  - Create Pop.CAN

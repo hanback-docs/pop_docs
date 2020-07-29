@@ -28,15 +28,17 @@ from pop import *
 <details>
 	<summary>simple example</summary>
 		
-	~~~python   
-		from pop import Out
-		import time 
+~~~python   
 
-		output = Out(1)
-		o.on()
-		time.sleep(1)
-		o.off()	
-	~~~
+	from pop import Out
+	import time 
+
+	output = Out(1)
+	o.on()
+	time.sleep(1)
+	o.off()	
+
+~~~
 	
 </details>
 

@@ -31,7 +31,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from [Out Class](#Class-Out)<br>
+&emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from [Out Class](#class-Out)<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the LED   
 

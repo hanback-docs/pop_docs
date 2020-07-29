@@ -202,8 +202,8 @@ from pop import *
 			
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**CDS**</span>  
-<blockquote class="desc"> Measure the Light with CDS sensor</blockquote>    
+## <span class="title">Class</span> <span class="title_accent">**Cds**</span>  
+<blockquote class="desc"> Measure the Light with Cds sensor</blockquote>    
 
 <h5>&emsp;Initialization</h5>   
 

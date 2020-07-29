@@ -24,6 +24,17 @@ from pop import *
 &emsp;<code class="code_accent">on()</code> : Set GPIO connected to Output Device to HIGH  
 &emsp;<code class="code_accent">off()</code> : Set GPIO connected to Output Device to LOW   
 
+<h5>&emsp;Example</h5>
+
+~~~python
+from pop import Out
+import time 
+output = Out(1)
+o.on()
+time.sleep(1)
+o.off()
+~~~
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Led**</span>    

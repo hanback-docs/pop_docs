@@ -1138,7 +1138,7 @@ from pop import *
 ~~~
 
 </details>
-
+<br>
 
 &emsp;**Color**    
 &emsp;&emsp;**Initialization**<br>
@@ -1166,7 +1166,7 @@ from pop import *
 ~~~
 
 </details>
-
+<br>
 
 &emsp;**Proximity**  
 &emsp;&emsp;**Initialization**<br>

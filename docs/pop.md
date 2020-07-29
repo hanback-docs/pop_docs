@@ -28,7 +28,7 @@ from pop import *
 <details>
 	<summary>simple example</summary>
 	
-	   
+	~~~python   
 		from pop import Out
 		import time 
 
@@ -36,7 +36,7 @@ from pop import *
 		o.on()
 		time.sleep(1)
 		o.off()	
-	
+	~~~
 	
 </details>
 

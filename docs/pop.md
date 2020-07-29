@@ -9,7 +9,7 @@ from pop import *
 <!-- # Class & Method Description-->
 <hr/>
 
-## <span class="title">Class</span> <span class="title_accent">**Out**</span>    
+## <span class="title">Class</span> <span class="title_accent">**#Out**</span>    
 
 <blockquote class="desc"> Output device is controlled by GPIO</blockquote>
 
@@ -31,7 +31,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from Out Class<br>
+&emsp;<code class="code_accent">Led(n)</code> : Led Object inheriting from [Out Class](#Out)<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the LED   
 

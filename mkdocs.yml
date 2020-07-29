@@ -8,6 +8,10 @@ theme:
     name: readthedocs
 #    custom_dir: custom_theme/
         
+markdown_extensions:
+    - toc:
+        permalink: true
+        
 extra_css: 
     - extra.css
     

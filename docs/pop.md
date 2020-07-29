@@ -55,7 +55,7 @@ from pop import *
 &emsp;<code class="code_accent">allOn()</code> : Set all GPIO connected to Output Device to HIGH    
 &emsp;<code class="code_accent">allOff()</code> : Set all GPIO connected to Output Device to LOW    
 
-&emsp;Refer to [Out Class](pop.md#class-out) or [Led Class](pop.#class-led) for inherited and used methods.
+&emsp;Refer to [Out Class](pop.md#class-out) or [Led Class](pop.md#class-led) for inherited and used methods.
 
 ---
 
@@ -112,7 +112,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>
 
-&emsp;Refer to [Input Class](pop.md#class-Input) for inherited and used methods.
+&emsp;Refer to [Input Class](pop.md#class-input) for inherited and used methods.
 
 ---
 
@@ -127,7 +127,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>
 
-&emsp;Refer to [Input Class](pop.md#class-Input) or [Switch Class](pop.md#class-switch) for inherited and used methods.
+&emsp;Refer to [Input Class](pop.md#class-input) or [Switch Class](pop.md#class-switch) for inherited and used methods.
 
 ---
 
@@ -142,7 +142,7 @@ from pop import *
 
 <h5>&emsp;Methods</h5>
 
-&emsp;Refer to [Input Class](pop.md#class-Input) for inherited and used methods.
+&emsp;Refer to [Input Class](pop.md#class-input) for inherited and used methods.
 
 ---
 

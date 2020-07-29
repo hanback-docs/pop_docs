@@ -29,15 +29,13 @@ from pop import *
 	<summary>simple example</summary>
 		
 ~~~python   
-
 	from pop import Out
 	import time 
 
 	output = Out(1)
-	o.on()
+	output.on()
 	time.sleep(1)
-	o.off()	
-
+	output.off()	
 ~~~
 	
 </details>
@@ -59,31 +57,41 @@ from pop import *
 
 <h5>&emsp;Example</h5>
 
-```python
-from pop import Led
-import time 
-
-led = Led(1)
-o.on()
-time.sleep(1)
-o.off()
-```
+<details>
+	<summary>simple example 1</summary>
 
 ~~~python
-from pop import Led
-import time 
+	from pop import Led
+	import time 
 
-leds = [Led(23), Led(24), Led(25), Led(27)]    
-
-while True:
-    for led in leds:
-        led.on()
-        time.sleep(0.1)
-
-    for led in leds:
-        led.off()
-        time.sleep(0.1)
+	led = Led(1)
+	o.on()
+	time.sleep(1)
+	o.off()
 ~~~
+
+</details>
+
+<details>
+	<summary>simple example 2</summary>
+
+~~~python
+	from pop import Led
+	import time 
+
+	leds = [Led(23), Led(24), Led(25), Led(27)]    
+
+	while True:
+	    for led in leds:
+		led.on()
+		time.sleep(0.1)
+
+	    for led in leds:
+		led.off()
+		time.sleep(0.1)
+~~~
+
+</details>
 
 ---
 
@@ -103,6 +111,24 @@ while True:
 
 &emsp;Refer to [Out Class](pop.md#class-out) or [Led Class](pop.md#class-led) for inherited and used methods.
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Leds
+	import time 
+
+	leds = Leds()
+	leds.allOn()
+	time.sleep(1)
+	leds.allOff()
+~~~
+
+</details>
+
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Fan**</span>    
@@ -117,6 +143,24 @@ while True:
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [Out Class](pop.md#class-out) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Fan
+	import time 
+
+	dcfan = Fan(17)
+	dcfan.on()
+	time.sleep(2)
+	dcfan.off()
+~~~
+
+</details>
+
 
 ---
 
@@ -145,6 +189,24 @@ while True:
 &emsp;&emsp;&emsp;`param` : Parameters passed to the Callback function , Default None    
 &emsp;&emsp;&emsp;`type` : Call condition of Callback function , Default BOTH  
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Input
+	import time 
+
+	input = Input()
+	for i in range(20):
+		ret = input.read()
+		print(ret)
+		time.sleep(1)	
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Switch**</span>    
@@ -159,6 +221,24 @@ while True:
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [Input Class](pop.md#class-input) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Input
+	import time 
+
+	input = Input()
+	for i in range(20):
+		ret = input.read()
+		print(ret)
+		time.sleep(1)	
+~~~
+
+</details>
 
 ---
 

@@ -25,16 +25,20 @@ from pop import *
 &emsp;<code class="code_accent">off()</code> : Set GPIO connected to Output Device to LOW   
 
 <h5>&emsp;Example</h5>
+<details>
+	<summary>simple example</summary>
+	
+	   
+		from pop import Out
+		import time 
 
-~~~python
-from pop import Out
-import time 
-
-output = Out(1)
-o.on()
-time.sleep(1)
-o.off()
-~~~
+		output = Out(1)
+		o.on()
+		time.sleep(1)
+		o.off()	
+	
+	
+</details>
 
 ---
 

@@ -35,6 +35,10 @@ from pop import *
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the LED   
 
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [Out Class](pop.md#class-out) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Leds**</span>    
@@ -51,6 +55,8 @@ from pop import *
 &emsp;<code class="code_accent">allOn()</code> : Set all GPIO connected to Output Device to HIGH    
 &emsp;<code class="code_accent">allOff()</code> : Set all GPIO connected to Output Device to LOW    
 
+&emsp;Refer to [Out Class](pop.md#class-out) or [Led Class](pop.#class-led) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Fan**</span>    
@@ -61,6 +67,10 @@ from pop import *
 &emsp;<code class="code_accent">Fan(n)</code> : Fan object inheriting from [Out Class](pop.md#class-out)<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the Fan   
+
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [Out Class](pop.md#class-out) for inherited and used methods.
 
 ---
 
@@ -100,6 +110,10 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the switch    
 
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [Input Class](pop.md#class-Input) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Switches**</span>    
@@ -111,6 +125,10 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : List number defined in the board and connected to the Switch    
 
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [Input Class](pop.md#class-Input) or [Switch Class](pop.md#class-switch) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Pir**</span>    
@@ -121,6 +139,10 @@ from pop import *
 &emsp;<code class="code_accent">Pir(n)</code> : Pir object inheriting from [Input Class](pop.md#class-input)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the Pir 
+
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [Input Class](pop.md#class-Input) for inherited and used methods.
 
 ---
 
@@ -199,6 +221,8 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : ADC Raw Data    
 &emsp;&emsp;&emsp;`calibration` : Calibration Value, Default 1.1    
+
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 			
 ---
 
@@ -220,6 +244,8 @@ from pop import *
 &emsp;<code class="code_accent">setCalibrationPseudoLx(func)</code> : Set calibration function<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : Calibration function
+
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 
 ---
 
@@ -277,6 +303,8 @@ from pop import *
 &emsp;&emsp;&emsp;`val` : raw ADC value    
 &emsp;&emsp;&emsp;`rl` : register(k ohm) in circuit. default 4.7(k ohm) 
 
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Temperature**</span>    
@@ -298,6 +326,8 @@ from pop import *
 &emsp;&emsp;&emsp;`val` : ...    
 &emsp;&emsp;&emsp;`cal` : ...    
 
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Sound**</span>    
@@ -311,6 +341,10 @@ from pop import *
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
 &emsp;&emsp;&emsp;`bus` : Not Used..    
 &emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 			
 ---
 
@@ -325,6 +359,10 @@ from pop import *
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
 &emsp;&emsp;&emsp;`bus` : Not Used..    
 &emsp;&emsp;&emsp;`speed` : SPI Interface Clock Speed , Default 1000000(1MHz)    
+
+<h5>&emsp;Methods</h5>
+
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 			
 ---
 
@@ -348,6 +386,7 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
 &emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
+&emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 
 ---
 
@@ -446,6 +485,8 @@ from pop import *
 
 &emsp;<code class="code_accent">readTemp()</code> : Return calculated and calibrated celsius(°C) temperature. (float type)  
 &emsp;<code class="code_accent">readHumi()</code> : Return calculated and calibrated humidity. (float type)  
+
+&emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.
 
 ---
 
@@ -654,6 +695,8 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`automode` : `True` or `False`    
 
+&emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.
+
 <hr/>
 
 ## <span class="title">Class</span> <span class="title_accent">**Gesture**</span>    
@@ -673,6 +716,8 @@ from pop import *
 &emsp;<code class="code_accent">readStr()</code> : Return String as Gesture status    
 &emsp;&emsp;**Return**  
 &emsp;&emsp;&emsp;"None" , "Left", "Right", "Up", "Down", "Near", "Far"    
+		
+&emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.		
 		
 <h5>&emsp;Inner Class</h5>  
 

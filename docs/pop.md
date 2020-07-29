@@ -29,6 +29,7 @@ from pop import *
 ~~~python
 from pop import Out
 import time 
+
 output = Out(1)
 o.on()
 time.sleep(1)
@@ -49,6 +50,34 @@ o.off()
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [Out Class](pop.md#class-out) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+```python
+from pop import Led
+import time 
+
+led = Led(1)
+o.on()
+time.sleep(1)
+o.off()
+```
+
+~~~python
+from pop import Led
+import time 
+
+leds = [Led(23), Led(24), Led(25), Led(27)]    
+
+while True:
+    for led in leds:
+        led.on()
+        time.sleep(0.1)
+
+    for led in leds:
+        led.off()
+        time.sleep(0.1)
+~~~
 
 ---
 

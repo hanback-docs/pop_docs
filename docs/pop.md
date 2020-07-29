@@ -452,8 +452,8 @@ from pop import *
 		time.sleep(0.5)
 ~~~
 
-</details>		
-		
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Cds**</span>  
@@ -631,8 +631,8 @@ from pop import *
 	    time.sleep(0.2)
 ~~~
 
-</details>		
-		
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Vr**</span>    
@@ -811,7 +811,7 @@ from pop import *
 <h5>&emsp;Example</h5>
 
 <details>
-	<summary>simple example 1</summary>
+	<summary>simple example</summary>
 
 ~~~python
 	from pop import TempHumi
@@ -1109,8 +1109,8 @@ from pop import *
 	    time.sleep(0.1)
 ~~~
 
-</details>		
-		
+</details>
+
 <h5>&emsp;Inner Class</h5>  
 
 &emsp;**Light**    
@@ -1137,7 +1137,8 @@ from pop import *
 	    time.sleep(0.2)
 ~~~
 
-</details>	
+</details>
+
 
 &emsp;**Color**    
 &emsp;&emsp;**Initialization**<br>
@@ -1165,6 +1166,7 @@ from pop import *
 ~~~
 
 </details>
+
 
 &emsp;**Proximity**  
 &emsp;&emsp;**Initialization**<br>

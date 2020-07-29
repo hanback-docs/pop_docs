@@ -81,7 +81,7 @@ from pop import *
 
 	leds = [Led(23), Led(24), Led(25), Led(27)]    
 
-	while True:
+	for i in range(20):
 	    for led in leds:
 		led.on()
 		time.sleep(0.1)
@@ -196,13 +196,10 @@ from pop import *
 
 ~~~python
 	from pop import Input
-	import time 
 
-	input = Input()
-	for i in range(20):
-		ret = input.read()
-		print(ret)
-		time.sleep(1)	
+	input = Input(22)
+	data = input.read()
+	print(ret)
 ~~~
 
 </details>
@@ -228,14 +225,11 @@ from pop import *
 	<summary>simple example</summary>
 
 ~~~python
-	from pop import Input
-	import time 
+	from pop import Switch
 
-	input = Input()
-	for i in range(20):
-		ret = input.read()
-		print(ret)
-		time.sleep(1)	
+	sw = Switch(22)
+	data = sw.read()
+	print(data)
 ~~~
 
 </details>
@@ -255,6 +249,22 @@ from pop import *
 
 &emsp;Refer to [Input Class](pop.md#class-input) or [Switch Class](pop.md#class-switch) for inherited and used methods.
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Switches
+	switch = Switches()
+
+	data = switch[0].read()
+
+	print(data)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Pir**</span>    
@@ -269,6 +279,45 @@ from pop import *
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [Input Class](pop.md#class-input) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example 1</summary>
+
+~~~python
+	from pop import Pir
+	pir = Pir(22)
+
+	data = pir.read()
+
+	print(data)
+~~~
+
+</details>
+
+<details>
+	<summary>simple example 2</summary>
+
+~~~python
+	from pop import Pir
+	import time
+
+	pir = Pir(22)
+
+	def onPir(param):
+	    ret = pir.read()
+	    if (ret == True):
+		print("detect...")
+		time.sleep(2)
+	    else:
+		time.sleep(0.1)
+
+	pir.setCallback(onPir)
+	input("Press <Enter> Key...\n")
+~~~
+
+</details>
 
 ---
 
@@ -327,6 +376,42 @@ from pop import *
 &emsp;&emsp;&emsp;`min` : Analog data minimum , Default 0    
 &emsp;&emsp;&emsp;`max` : Analog data maximum , Default 4095 (MCP3208 12bit ADC Chip)
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example 1</summary>
+
+~~~python
+	from pop import SpiAdc
+	import time
+
+	adc = SpiAdc(7)
+
+	for i in range(20):
+	    val = adc.read()
+	    print("%d"%(val))
+	    time.sleep(0.1)
+~~~
+
+</details>
+
+<details>
+	<summary>simple example 2</summary>
+
+~~~python
+	from pop import SpiAdc
+	import time
+
+	adc = SpiAdc(7)
+
+	for i in range(20):
+	    val = adc.readVolt()
+	    print("volt = %.2f"%(val))
+	    time.sleep(0.1)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Psd**</span>    
@@ -349,7 +434,26 @@ from pop import *
 &emsp;&emsp;&emsp;`calibration` : Calibration Value, Default 1.1    
 
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
-			
+		
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Psd
+	import time 
+	
+	psd = Psd(1)
+	for i in range(20):
+		val = psd.readAverage()
+		cm = psd.calcDist(val)
+		print(cm)
+		time.sleep(0.5)
+~~~
+
+</details>		
+		
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Cds**</span>  
@@ -372,6 +476,25 @@ from pop import *
 &emsp;&emsp;&emsp;`func` : Calibration function
 
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Cds
+	import time 
+	
+	cds = Cds(2)
+	
+	for i in range(20):
+		val = cds.readAverage()
+		print(val)
+		time.sleep(0.5)
+~~~
+
+</details>
 
 ---
 
@@ -431,6 +554,25 @@ from pop import *
 
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Gas 
+	import time 
+
+	gas = Gas(6)
+
+	for i in range(20):
+	    val = gas.readAverage()
+	    print("val = %d, methan = %d"%(val,gas.calcMethan(val)))
+	    time.sleep(0.1)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Temperature**</span>    
@@ -471,7 +613,26 @@ from pop import *
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
-			
+		
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Sound
+	import time 
+	
+	sound = Sound(3)
+
+	for i in range(20):
+	    val = sound.read()
+	    print(val)
+	    time.sleep(0.2)
+~~~
+
+</details>		
+		
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Vr**</span>    
@@ -547,6 +708,39 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`sheet` : list [[scale],[pitch],[duration]]
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example 1</summary>
+
+~~~python
+	from pop import PiezoBuzzer
+	p = PiezoBuzzer(12)
+
+	p.tone(4, 8, 4)
+~~~
+
+</details>	
+
+<details>
+	<summary>simple example 2</summary>
+
+~~~python
+	from pop import PiezoBuzzer
+	p = PiezoBuzzer(12)
+
+	p.setTempo(120)
+
+	butterfly_scale = [4,4,4, 4,4,4, 4,4,4,4, 4,4,4,  4,4,4,4, 4,4,4, 4,4,4,4, 4,4,4]
+	butterfly_pitch = [8,5,5, 6,3,3, 1,3,5,6, 8,8,8,  8,5,5,5, 6,3,3, 1,5,8,8, 5,5,5]
+	butterfly_duration = [8,8,4,   8,8,4, 8,8,8,8, 8,8,4,  8,8,8,8, 8,8,4, 8,8,8,8, 8,8,4]
+	sheet_butterfly = [butterfly_scale, butterfly_pitch, butterfly_duration]
+
+	p.play(sheet_butterfly)
+~~~
+
+</details>	
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**I2c**</span>    
@@ -613,6 +807,26 @@ from pop import *
 &emsp;<code class="code_accent">readHumi()</code> : Return calculated and calibrated humidity. (float type)  
 
 &emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example 1</summary>
+
+~~~python
+	from pop import TempHumi
+	import time
+
+	th = TempHumi()
+
+	for i in range(20):
+	    temp = th.getTemperature()
+	    humi = th.getHumidity()
+	    print(temp, humi)
+	    time.sleep(0.5)
+~~~
+
+</details>	
 
 ---
 
@@ -823,6 +1037,39 @@ from pop import *
 
 &emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example 1</summary>
+
+~~~python
+	from pop import Oled
+
+	display = Oled()
+
+	display.print("Hello World")
+~~~
+
+</details>	
+
+<details>
+	<summary>simple example 2</summary>
+
+~~~python
+	from pop import Oled
+	import time 
+
+	display = Oled(automode=False)
+
+	display.drawCircle(60,30,10,display.WHITE)
+	display.display()
+	time.sleep(1)
+	display.fillCircle(60,30,10,display.WHITE)
+	display.display()
+~~~
+
+</details>	
+
 <hr/>
 
 ## <span class="title">Class</span> <span class="title_accent">**Gesture**</span>    
@@ -845,6 +1092,25 @@ from pop import *
 		
 &emsp;Refer to [I2c Class](pop.md#class-i2c) for inherited and used methods.		
 		
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Gesture
+	import time 
+	gesture = Gesture()
+
+	for i in range(0,1000):
+	    if gesture.isAvailable():   
+		motion = gesture.readStr() 
+		print(motion) 
+	    time.sleep(0.1)
+~~~
+
+</details>		
+		
 <h5>&emsp;Inner Class</h5>  
 
 &emsp;**Light**    
@@ -852,6 +1118,26 @@ from pop import *
 &emsp;&emsp;`Light()` : Light object  <br><br>
 &emsp;&emsp;**Methods**<br>
 &emsp;&emsp;`read()` : Return light value    
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Gesture
+	import time 
+	
+	gesture = Gesture()
+	light = Gesture.Light()
+
+	for i in range(0,10):
+	    val = light.read()
+	    print(val)
+	    time.sleep(0.2)
+~~~
+
+</details>	
 
 &emsp;**Color**    
 &emsp;&emsp;**Initialization**<br>
@@ -861,11 +1147,50 @@ from pop import *
 &emsp;&emsp;`readGreen()` : Return Green value    
 &emsp;&emsp;`readBlue()` : Return Blue value
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Gesture
+	import time 
+	
+	gesture = Gesture()
+	C = Gesture.Color()
+
+	for i in range(0,10):
+	    print(C.readRed(), C.readGreen(), C.readBlue())
+	    time.sleep(0.2)
+~~~
+
+</details>
+
 &emsp;**Proximity**  
 &emsp;&emsp;**Initialization**<br>
 &emsp;&emsp;`Proximity()` : Proximity object  <br><br>
 &emsp;&emsp;**Methods**<br>
 &emsp;&emsp;`read()` : Return Proximity value    
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Gesture
+	import time 
+	
+	gesture = Gesture()
+	p = Gesture.Proximity()
+
+	for i in range(0,10):
+	    val = p.read()
+	    print(val)
+	    time.sleep(0.2)
+~~~
+
+</details>
 	
 <hr/>
 
@@ -916,6 +1241,25 @@ from pop import *
 &emsp;&emsp;&emsp;&emsp;`True` : input (255,0,0) -> (0,255,255)    
 &emsp;&emsp;&emsp;&emsp;`False` : input (255,0,0) -> (255,0,0)    
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import PixelDisplay
+	import time 
+	
+	display = PixelDisplay()
+
+	display.setColor(0, 0, [5, 0, 0])
+	time.sleep(1)
+	display.fill([5, 0, 0])
+	time.sleep(1)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**TextLcd**</span>    
@@ -957,6 +1301,26 @@ from pop import *
 &emsp;<code class="code_accent">print(string)</code> : Print string data on the Textlcd.<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`string` : String data to be sent to the Textlcd.    
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Textlcd 
+	import time
+
+	lcd = Textlcd()
+
+	str = "Hello Pop Library"
+	time.sleep(1)
+	lcd.print(str)
+	time.sleep(1)
+	lcd.clear() 
+~~~
+
+</details>
 
 ---
 
@@ -1009,6 +1373,28 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`ch` : channel value. (0 ~ 11)    
 
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Touch 
+	import time 
+
+	touch = Touch()
+
+	for i in range(100):
+	    ret = touch.readAll()
+	    for i in range(12):
+		if ret[i] == True:
+		    print('ch %d pushed!\n'%i)
+
+		time.sleep(0.05)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Dust**</span>    
@@ -1033,6 +1419,26 @@ from pop import *
 &emsp;<code class="code_accent">pm_1p0_tsi</code> : Fine dust data read pm1.0 by tsi.    
 &emsp;<code class="code_accent">pm_2p5_tsi</code> : Fine dust data read pm2.5 by tsi.   
 &emsp;<code class="code_accent">pm_10_tsi</code> : Fine dust data read pm10 by tsi.   
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Dust
+	import time 
+
+	dust = Dust()
+	while True:
+	    dust.read()
+	    print("PM 1.0 GRIM  : %u ㎍/㎥"%dust.pm_1p0_grimm)
+	    print("PM 2.5 GRIM  : %u ㎍/㎥"%dust.pm_2p5_grimm)
+	    print("PM 10  GRIM  : %u ㎍/㎥"%dust.pm_10_grimm)
+	    time.sleep(0.5)
+~~~
+
+</details>
 
 ---
 
@@ -1062,6 +1468,26 @@ from pop import *
 &emsp;&emsp;&emsp;`freq` : Frequency. ex) 50 -> 50Hz     
 
 &emsp;<code class="code_accent">setInvertPulse()</code> : Invert the output PWM signal.  
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import PwmController
+	import time
+
+	pwm = PwmController()
+	pwm.init()
+	pwm.setChannel(0)
+	pwm.setFreq(50)
+	for i in range(10):
+	    pwm.setDuty(i*10)
+	    time.sleep(0.5)
+~~~
+
+</details>
 
 ---
 
@@ -1108,6 +1534,26 @@ from pop import *
 &emsp;<code class="code_accent">fnd(val)</code> : Write data to Shift Rgister for control FND<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`val` : number to be show on FND. range from '0' to '9'    
+
+<h5>&emsp;Example</h5>
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import ShiftRegister
+	import time 
+
+	gpio = [16,5,6]
+	s = ShiftRegister(gpio)
+
+	s.shiftout(0xff)
+	time.sleep(1)
+	s.shiftout(0x00)
+	time.sleep(1)
+~~~
+
+</details>
 
 ---
 

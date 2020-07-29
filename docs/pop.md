@@ -27,7 +27,7 @@ from pop import *
 <h5>&emsp;Example</h5>
 <details>
 	<summary>simple example</summary>
-	
+		
 	~~~python   
 		from pop import Out
 		import time 

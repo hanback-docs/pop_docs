@@ -42,7 +42,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Leds(n)</code> : Leds object inheriting from Led Class<br>
+&emsp;<code class="code_accent">Leds(n)</code> : Leds object inheriting from [Led Class](pop.md#class-led)<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : List number defined in board and connected to the LED  
 
@@ -58,7 +58,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Fan(n)</code> : Fan object inheriting from Out Class<br>
+&emsp;<code class="code_accent">Fan(n)</code> : Fan object inheriting from [Out Class](pop.md#class-out)<br>
 &emsp;&emsp;**Params**    
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the Fan   
 
@@ -96,7 +96,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Switch(n)</code> : Switch object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switch(n)</code> : Switch object inheriting from [Input Class](pop.md#class-input)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the switch    
 
@@ -107,7 +107,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Switches(n)</code> : Switch object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Switches(n)</code> : Switch object inheriting from [Input Class](pop.md#class-input)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : List number defined in the board and connected to the Switch    
 
@@ -118,7 +118,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Pir(n)</code> : Pir object inheriting from Input Class<br>
+&emsp;<code class="code_accent">Pir(n)</code> : Pir object inheriting from [Input Class](pop.md#class-input)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : GPIO number connected to the Pir 
 
@@ -186,7 +186,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Psd(channel=-1, device=0, bus=0, speed=1000000)</code> : PSD object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Psd(channel=-1, device=0, bus=0, speed=1000000)</code> : PSD object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -207,7 +207,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Cds(channel=-1, device=0, bus=0, speed=1000000)</code> : Cds object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Cds(channel=-1, device=0, bus=0, speed=1000000)</code> : Cds object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -228,7 +228,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Gas(channel=-1, device=0, bus=0, speed=1000000)</code> : Gas object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Gas(channel=-1, device=0, bus=0, speed=1000000)</code> : Gas object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -284,7 +284,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Temperature(channel, device=0, bus=0, speed=1000000)</code> : Temperature object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Temperature(channel, device=0, bus=0, speed=1000000)</code> : Temperature object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -305,7 +305,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Sound(channel=-1, device=0, bus=0, speed=1000000)</code> : Sound object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Sound(channel=-1, device=0, bus=0, speed=1000000)</code> : Sound object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -319,7 +319,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Vr(channel=-1, device=0, bus=0, speed=1000000)</code> : Vr object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Vr(channel=-1, device=0, bus=0, speed=1000000)</code> : Vr object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -333,7 +333,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>
 
-&emsp;<code class="code_accent">Potentiometer(channel=-1, device=0, bus=0, speed=1000000)</code> <br>&emsp;: Potentiometer object inheriting from SpiAdc Class<br>
+&emsp;<code class="code_accent">Potentiometer(channel=-1, device=0, bus=0, speed=1000000)</code> <br>&emsp;: Potentiometer object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`channel` : ADC Channel    
 &emsp;&emsp;&emsp;`device` : SPI Interface Channel , Default 0 (in Raspberry Pi)    
@@ -454,7 +454,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>  
 
-&emsp;<code class="code_accent">Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True)</code> <br>&emsp;: Oled object inheriting from I2C Class (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    <br>
+&emsp;<code class="code_accent">Oled( addr=OLED_ADDR, type=OLED_NONE_TYPE, automode=True)</code> <br>&emsp;: Oled object inheriting from [I2C Class](pop.md#class-i2c) (I2c Slave Address -> 0x3c). This method calls init(), clearDisplay()    <br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`addr` : OLED I2C ADDR.default 0x3c    
 &emsp;&emsp;&emsp;`type` : OLED Type. difined board config    
@@ -661,7 +661,7 @@ from pop import *
 
 <h5>&emsp;Initialization</h5>   
 
-&emsp;<code class="code_accent">Gesture(addr=APDS9960_ADDR)</code> : Gesture object inheriting from I2C Class (I2c Slave Address -> 0x39)    
+&emsp;<code class="code_accent">Gesture(addr=APDS9960_ADDR)</code> : Gesture object inheriting from [I2C Class](pop.md#class-i2c) (I2c Slave Address -> 0x39)    
 	
 <h5>&emsp;Methods</h5>   
 

@@ -672,8 +672,26 @@ from pop import *
 &emsp;<code class="code_accent">setRangeTable(table)</code> : Set potentiometer range table<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`table` : Table with 10 elements    
-&emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]
+&emsp;&emsp;&emsp;&emsp;ex) [48, 300, 700, 1090, 1540, 1945, 2320, 2715, 2980, 3040]    
+
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
+
+<details>
+	<summary>simple example1</summary>
+		
+~~~python   
+	from pop import Potentiometer
+	import time
+
+	poten = Potentiometer(5)
+	
+	for i in range(20):
+		val = poten.read()
+		print(val)
+		time.sleep(0.2)
+~~~
+	
+</details>
 
 ---
 
@@ -1354,6 +1372,25 @@ from pop import *
 &emsp;<code class="code_accent">readAccel()</code> : Update accel variables.  
 &emsp;<code class="code_accent">readGyro()</code> : Update gyro variables.  
 
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import Mpu6050
+	import time
+	mpu6050 = Mpu6050()
+
+	for i in range(30):
+		gyro = mpu6050.readGyro()
+		accel = mpu6050.readAccel()
+
+		print("Gyro - X:%d, Y:%d, Z:%d"%(gyro[0], gyro[1], gyro[2]))
+		print("Accel - X:%d, Y:%d, Z:%d"%(accel[0], accel[1], accel[2]))
+	    time.sleep(0.5)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Touch**</span>    
@@ -1627,6 +1664,25 @@ from pop import *
 &emsp;<code class="code_accent">run()</code> : Start playing the file.    
 &emsp;<code class="code_accent">isPlay()</code> : Return playing status. True means playing now, False means stopped.    
 
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import AudioPlay
+	import time 
+
+	with AudioPlay("/usr/share/sounds/alsa/Side_Left.wav", False, True) as play:   
+	    play.run()
+	    print("Start Play...")
+	    for _ in range(12):  
+	        time.sleep(1)
+
+	    play.stop()
+	    print("Stop play...")
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**AudioPlayList**</span>    
@@ -1647,6 +1703,22 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`pos` : Index of WAV file in playing list. Default is 0.    
 
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import AudioPlayList
+	import time 
+
+	playlist = ["/usr/share/sounds/alsa/Front_Center.wav", "/usr/share/sounds/alsa/Side_Left.wav", "/usr/share/sounds/alsa/Side_Right.wav"]
+
+	with AudioPlayList(playlist) as play:
+	    print("Start PlayList...") 
+	    play.run()
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**AudioRecord**</span>    
@@ -1665,6 +1737,26 @@ from pop import *
 <h5>&emsp;Methods</h5>  
 
 &emsp;<code class="code_accent">run()</code> : Start recording.   
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	from pop import AudioRecord
+	import time 
+
+	with AudioRecord("my_record.wav") as record:
+	    record.run()
+	    print("Start Recording...") 
+	
+	    for _ in range(5):
+	        time.sleep(1)
+	
+	    record.stop()
+	    print("Stop Recording...") 
+~~~
+
+</details>
 
 ---
 
@@ -1697,6 +1789,43 @@ from pop import *
 &emsp;&emsp;&emsp;`pitch` : Pitch of melody. ("DO", "DO#", "RE", "RE#", "MI", "FA", "SOL", "SOL#", "RA", "RA#", "SI")    
 &emsp;&emsp;&emsp;`duration` : Duration of melody.    
 
+<details>
+	<summary>simple example1</summary>
+
+~~~python
+	from pop import Tone
+	import time 
+
+	with Tone() as tone:
+		for n in [1, 3, 5, 7, 8, 10, 12]:
+			tone.play(3, n, 4)
+~~~
+
+</details>
+
+<details>
+	<summary>simple example2</summary>
+
+~~~python
+	from pop import Tone
+
+	schoolBell1 = ((4, "SOL", 1/4), (4, "SOL", 1/4), (4, "RA", 1/4), (4, "RA", 1/4), (4, "SOL", 1/4), (4, "SOL", 1/4), (4, "MI", 1/2), (4, "SOL", 1/4), (4, "SOL", 1/4), (4, "MI", 1/4), (4, "MI", 1/4), (4, "RE", 1/2 + 1/4))
+	schoolBell2 = (*schoolBell1[:7], (4, "SOL", 1/4), (4, "MI", 1/4), (4, "RE", 1/4), (4, "MI", 1/4), (4, "DO", 1/2 + 1/4))
+
+	with Tone() as tone:
+	    tone.setTempo(200)
+
+	    for n in schoolBell1:
+	        tone.play(*n)
+	    tone.rest(1/4)
+
+	    for n in schoolBell2:
+	        tone.play(*n)
+	    tone.rest(1/4)
+~~~
+
+</details>
+
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**SoundMeter**</span>    
@@ -1718,3 +1847,25 @@ from pop import *
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`func` : User callback method.    
 &emsp;&emsp;&emsp;`*args` : Argument to be conveyed to user callback method. (skippable)    
+
+<details>
+	<summary>simple example</summary>
+
+~~~python
+	import time
+	from pop import SoundMeter
+	
+	sm = SoundMeter()
+	
+	def onSoundMeter(rms, inData):
+	    if(rms>600):
+	        print(rms)
+	
+	sm.setCallback(onSoundMeter)
+	
+	input("input something")
+	
+	sm.stop()
+~~~
+
+</details>

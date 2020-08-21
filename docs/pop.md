@@ -650,7 +650,24 @@ from pop import *
 <h5>&emsp;Methods</h5>
 
 &emsp;Refer to [SpiAdc Class](pop.md#class-spiadc) for inherited and used methods.
-			
+		
+<details>
+	<summary>simple example1</summary>
+		
+~~~python   
+	from pop import Vr
+	import time
+
+	vr = Vr(5)
+	
+	for i in range(20):
+		val = vr.read()
+		print(val)
+		time.sleep(0.2)
+~~~
+	
+</details>
+	
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Potentiometer**</span>    

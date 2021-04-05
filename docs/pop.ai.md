@@ -335,18 +335,6 @@ from pop.AI import Face_Detection
 &emsp;&emsp;**Params**  
 &emsp;&emsp;&emsp;`camera` : Camera object.   
 &emsp;&emsp;&emsp;`resolution_type` : Resolution of the image.    
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 0=160x120  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 1=320x240  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 2=480x360  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 3=640x480  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 4=800x600  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 5=960x720  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 6=1120x840  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 7=1280x960  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 8=1440x1080  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 9=1600x1200  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 10=1760x1320  
-&emsp;&emsp;&emsp;&emsp;&emsp;- TYPE 11=1920x1440  
 
 <h5>&emsp;Methods</h5>
 

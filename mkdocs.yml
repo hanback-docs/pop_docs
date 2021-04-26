@@ -6,7 +6,7 @@ markdown_extensions:
         permalink: true
 
 theme:
-    name: 'rtd-dropdown'
+    name: readthedocs
     highlightjs: true
     hljs_languages:
         - python

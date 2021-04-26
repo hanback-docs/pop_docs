@@ -3,6 +3,7 @@ site_name: Pop Description
 markdown_extensions:
     - toc:
         baselevel: 3
+        permalink: true
 
 theme:
     name: readthedocs
@@ -10,12 +11,8 @@ theme:
     hljs_languages:
         - python
     features:
-        - toc.integrate
+        - navigation.instant
 #    custom_dir: custom_theme/
-        
-markdown_extensions:
-    - toc:
-        permalink: true
         
 extra_css: 
     - extra.css

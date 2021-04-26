@@ -18,3 +18,6 @@
   - Create Pop.CAN
   - Create Internal Link in Pop.md 
   - Add Example in Pop.md 
+
+## V1.3 (210405)
+  - Add Class in Pop.AI

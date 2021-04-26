@@ -2,7 +2,7 @@ site_name: Pop Description
 
 markdown_extensions:
     - toc:
-        baselevel: 2
+        baselevel: 3
 
 theme:
     name: readthedocs

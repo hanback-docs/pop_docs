@@ -9,7 +9,7 @@ from pop import *
 <!-- # Class & Method Description-->
 <hr/>
 
-<h2>## <span class="title">Class</span> <span class="title_accent">**Out**</span></h2>
+## <span class="title">Class</span> <span class="title_accent">**Out**</span>
 
 <blockquote class="desc"> Output device is controlled by GPIO</blockquote>
 

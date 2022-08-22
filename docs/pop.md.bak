@@ -25,7 +25,7 @@ from pop import *
 Flame detected = `False`, Flame not detected = `True`<br>
 &emsp;<code class="code_accent">setCallback(func,param=None,type=BOTH)</code> : Callback function setting called Edge is detected<br>
 &emsp;&emsp;**Params**   
-&emsp;&emsp;&emsp;`func` : Callback function<br>
+&emsp;&emsp;&emsp;`func` : Callback function
 &emsp;&emsp;&emsp;`param` : Parameters passed to Callback function<br>
 &emsp;&emsp;&emsp;`type` : Edge type
 

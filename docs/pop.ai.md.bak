@@ -319,3 +319,95 @@ from pop.AI import DQN
 
 ---
 
+## <span class="title">Class</span> <span class="title_accent">**Face_Detection**</span>    
+
+<blockquote class="desc">Class for experiencing face recognition models.</blockquote>
+
+The code to import the Face_Detection Class :
+
+``` python
+from pop.AI import Face_Detection
+```
+
+<h5>&emsp;Initialization</h5>
+
+&emsp;<code class="code_accent">Face_Detection(camera=None, resolution_type=1)</code> : Face Detection Object<br>
+&emsp;&emsp;**Params**  
+&emsp;&emsp;&emsp;`camera` : Camera object.   
+&emsp;&emsp;&emsp;`resolution_type` : Resolution of the image.    
+
+<h5>&emsp;Methods</h5>
+
+&emsp;<code class="code_accent">get_faces(value=None, show=True)</code> : Find the location of the face.  
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file. When value is None, the camera image is used.   
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+&emsp;<code class="code_accent">get_feautres(value=None, show=True)</code> : Find a total of 68 landmarks along eyes, nose, mouth, eyebrows, and face shape and characterize someone.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file. When value is None, the camera image is used.   
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+&emsp;<code class="code_accent">show()</code> : Show an image.  
+
+&emsp;<code class="code_accent">set_source(value=None)</code> : Set Reference Image.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file to be the reference. When value is None, the camera image is used. 
+
+&emsp;<code class="code_accent">compare_face(value=None, src=None, threshold=0.5, show=True)</code> : Show an image.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file. When value is None, the camera image is used.  
+&emsp;&emsp;&emsp;`src` : Input the array or name of the image file to be the reference. When value is None, the camera image is used.  
+&emsp;&emsp;&emsp;`threshold` : Value to determine whether the person is the same or different.  
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+&emsp;<code class="code_accent">register_face(value, name, show=False)</code> : Register a face on the list.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file. When value is None, the camera image is used.  
+&emsp;&emsp;&emsp;`name` : Name of face.  
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+&emsp;<code class="code_accent">list_faces()</code> : Names of faces registered on the list.   
+
+&emsp;<code class="code_accent">drop_face(name)</code> : Delete the face on the list.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`name` : Name of face to delete. 
+
+&emsp;<code class="code_accent">search(value=None, threshold=0.5, show=True)</code> : Show an image.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`value` : Input the array or name of the image file. When value is None, the camera image is used.  
+&emsp;&emsp;&emsp;`threshold` : Value to determine whether the person is the same or different.  
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+---
+
+## <span class="title">Class</span> <span class="title_accent">**Object_Detect**</span>    
+
+<blockquote class="desc">Class for experiencing object detection models.</blockquote>
+
+The code to import the Object_Detect Class :
+
+``` python
+from pop.AI import Object_Detect
+```
+
+<h5>&emsp;Initialization</h5>
+
+&emsp;<code class="code_accent">Object_Detect(camera=None)</code> : Object Detection Object<br>
+&emsp;&emsp;**Params**  
+&emsp;&emsp;&emsp;`camera` : Camera object.   
+
+<h5>&emsp;Methods</h5>
+
+&emsp;<code class="code_accent">show()</code> : The camera screen and model prediction values are displayed on the screen.  
+
+&emsp;<code class="code_accent">load_model()</code> : Load the saved model.   
+
+&emsp;<code class="code_accent">detect(image=None, index=None, threshold=0.5, show=True)</code> : Show an image.   
+&emsp;&emsp;**Params**    
+&emsp;&emsp;&emsp;`image` : Input the array or name of the image file. When value is None, the camera image is used.  
+&emsp;&emsp;&emsp;`index` : Index of recognizable list used by YOLOv4-tiny model.  
+&emsp;&emsp;&emsp;`threshold` : Value that determines which index the detected object corresponds to.  
+&emsp;&emsp;&emsp;`show` : Whether or not to express results in graphic.  
+
+---

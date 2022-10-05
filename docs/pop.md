@@ -107,9 +107,9 @@ from pop import Led
 import time 
 
 led = Led(1)
-o.on()
+led.on()
 time.sleep(1)
-o.off()    
+led.off()    
 ~~~
 
 </details>
@@ -281,8 +281,10 @@ This class is used in AIoT Server Plus, SensorPack option.</blockquote>
 ~~~python
 from pop import Flame
 import time
+
 flame1 = Flame(17)
 flame2 = Flame(27)
+
 while True:
 	print("flame1 : %d , flame2 : %d"%(flame1.read(),flame2.read()))
 	time.sleep(0.05)
@@ -296,8 +298,10 @@ while True:
 ~~~python
 from pop import Flame
 import time
+
 flame1 = Flame(17)
 count = 0
+
 def onFlame(unuse):
 	globla count
 	caount += 1
@@ -413,7 +417,9 @@ This class is used in SensorPack option.</blockquote>
 ~~~python
 from pop import Bme680
 import time
+
 b = Bme680(0x77)
+
 while True:
 	sensor = b.getSensorData()
 	temp = b.getTemperature()
@@ -454,7 +460,9 @@ This class is used in SensorPack option.</blockquote>
 ~~~python
 from pop import Light
 import time
+
 l = Light(0x23)
+
 while True:
 	print("light : %d [lx]"%l.getLight())
 	time.sleep(0.5)
@@ -485,7 +493,9 @@ This class is used in SensorPack option.</blockquote>
 ~~~python
 from pop import CO2
 import time
+
 c = CO2()
+
 while True:
 	print(c.read())
 ~~~
@@ -531,7 +541,9 @@ This class is used in SensorPack option.</blockquote>
 ~~~python
 from pop import Thermopile
 import time
+
 d = Thermopile(7)
+
 while True:
 	print(d.read())
 	time.sleep(1)
@@ -563,13 +575,17 @@ This class is used in SensorPack option.</blockquote>
 ~~~python
 from pop import MicroWave
 import time
+
 m = MicroWave(16)
+
 while True:
 	result = m.read()
+
 	if result!=0:
 		print("%5.5f [km/h]\r\n"%(result))
 	else:
 		print(".\n")
+
 	time.sleep(0.5)
 ~~~
 
@@ -618,11 +634,11 @@ pir = Pir(22)
 
 def onPir(param):
 	ret = pir.read()
-	if (ret == True):
-	print("detect...")
-	time.sleep(2)
+	if ret == True:
+		print("detect...")
+		time.sleep(2)
 	else:
-	time.sleep(0.1)
+		time.sleep(0.1)
 
 pir.setCallback(onPir)
 input("Press <Enter> Key...\n")
@@ -1084,7 +1100,6 @@ for i in range(10):
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Audio**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>
 
@@ -1102,7 +1117,6 @@ for i in range(10):
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**AudioPlay**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>
 
@@ -1141,7 +1155,6 @@ with AudioPlay("/usr/share/sounds/alsa/Side_Left.wav", False, True) as play:
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**AudioPlayList**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>
 
@@ -1179,7 +1192,6 @@ with AudioPlayList(playlist) as play:
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**AudioRecord**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>&emsp;<code class="code_accent">AudioRecord(file, sFormat=8, sChannel=1, sRate=48000, sFramePerBuffer=1024)</code> : AudioRecord object. Only non-blocking mode is supported.<br>
 
@@ -1188,7 +1200,7 @@ with AudioPlayList(playlist) as play:
 &emsp;&emsp;&emsp;`sFormat` : Sampling type. 8 is paInt16, 2 is paInt32, 1 is pa Float32. Default is 8. (int type)    
 &emsp;&emsp;&emsp;`sChannel` : Number of channel. Default is 1.    
 &emsp;&emsp;&emsp;`sRate` : Sampling rate(Hz). Default is 48000.    
-&emsp;&emsp;&emsp;`sFramePerBuffer` : Frame per buffer. Default 1024.    
+&emsp;&emsp;&emsp;`sFramePerBuffer` : Frame per buffer. Default 1024.  
 
 <h4><b>Methods</b></h4>
 
@@ -1219,7 +1231,6 @@ with AudioRecord("my_record.wav") as record:
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Tone**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>
 
@@ -1288,7 +1299,6 @@ with Tone() as tone:
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**SoundMeter**</span>    
-<br>
 
 <h4><b>Initialization</b></h4>
 

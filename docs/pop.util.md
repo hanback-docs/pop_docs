@@ -6,7 +6,6 @@ Pop.Util is an easy and fast training library for robot control.
 <hr/>
 
 ## <span class="title">Function</span> <span class="title_accent">**imshow**</span>   
-<br>
 
 The code to use the imshow method :
 
@@ -29,7 +28,6 @@ from pop.Util import imshow
 ---
 
 ## <span class="title">Function</span> <span class="title_accent">**enable_imshow**</span>   
-<br>
 
 The code to use the enable_imshow method :
 
@@ -46,7 +44,6 @@ from pop.Util import enable_imshow
 ---
 
 ## <span class="title">Function</span> <span class="title_accent">**toMFCC**</span>   
-<br>
 
 The code to use the toMFCC method :
 
@@ -67,7 +64,6 @@ from pop.Util import toMFCC
 ---
 
 ## <span class="title">Function</span> <span class="title_accent">**one_hot**</span>   
-<br>
 
 The code to use the one_hot method :
 
@@ -87,7 +83,6 @@ from pop.Util import one_hot
 ---
 
 ## <span class="title">Function</span> <span class="title_accent">**gstrmer**</span>   
-<br>
 
 The code to use the gstrmer method :
 
@@ -109,7 +104,6 @@ from pop.Util import gstrmer
 ---
 
 ## <span class="title">Function</span> <span class="title_accent">**createIMG**</span>   
-<br>
 
 The code to use the createIMG method :
 

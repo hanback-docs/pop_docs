@@ -11,7 +11,6 @@ In addition, it provides functions such as object detection, collision avoidance
 
 <blockquote class="desc">A simple Linear Regression class for one to one datasets.</blockquote>
 
-<br>
 The code to import the Linear_Regression Class :
 
 ``` python
@@ -57,7 +56,6 @@ from pop.AI import Linear_Regression
 
 <blockquote class="desc">A simple Logistic Regression class for many to one datasets. Inherited Linear_Regression class</blockquote>
 
-<br>
 The code to import the Logistic_Regression Class :
 
 ``` python
@@ -87,7 +85,6 @@ from pop.AI import Logistic_Regression
 
 <blockquote class="desc">A simple Perceptron class for many to many datasets.</blockquote>
 
-<br>
 The code to import the Perceptron Class :
 
 ``` python
@@ -282,7 +279,6 @@ from pop.AI import RNN
 
 <blockquote class="desc">A simple Deep Q-Network class. Inherited DQN</blockquote>
 
-<br>
 The code to import the DQN Class :
 
 ``` python
@@ -324,7 +320,6 @@ from pop.AI import DQN
 <blockquote class="desc">The FaceNet is a convolutional neural network class for face detection.<br>
 This class is used in AIoT Home.</blockquote>
 
-<br>
 The code to import the FaceNet Class :
 
 ``` python
@@ -360,7 +355,6 @@ from pop.AI import FaceNet
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
 In AIoT AutoCAR, AIoT AutoCAR Prime, AIoT SerBot, this class is in Pilot.</blockquote>
 
-<br>
 The code to import the Collision_Avoid Class :
 
 ``` python
@@ -409,7 +403,6 @@ from pop.AI import Collision_Avoid
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
 In AIoT AutoCAR, AIoT AutoCAR Prime, AIoT SerBot, this class is in Pilot.</blockquote>
 
-<br>
 The code to import the Object_Follow Class :
 
 ``` python
@@ -449,7 +442,6 @@ from pop.AI import Object_Follow
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
 In AIoT AutoCAR, AIoT AutoCAR Prime, AIoT SerBot, this class is in Pilot.</blockquote>
 
-<br>
 The code to import the Track_Follow Class :
 
 ``` python
@@ -531,7 +523,6 @@ from pop.AI import Object_Detect
 <blockquote class="desc">The Pose_Estimation is a convolutional neural network class for optimal pose estimation.<br>
 This class is used in AIoT AutoCAR 2.</blockquote>
 
-<br>
 The code to import the Pose_Estimation Class :
 
 ``` python

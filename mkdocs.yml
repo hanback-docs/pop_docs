@@ -22,8 +22,9 @@ nav:
     - Home: index.md
     - Pop : pop.md
     - Pop.AI : pop.ai.md
-    - Pop.Pilot : pop.pilot.md
     - Pop.CAN : pop.can.md
+    - Pop.Dataset : pop.dataset.md
+    - Pop.Pilot : pop.pilot.md
     - Pop.Util : pop.util.md
     
 highlightjs: true

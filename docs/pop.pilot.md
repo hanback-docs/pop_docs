@@ -54,7 +54,7 @@ drv.stop()
 
 ## <span class="title">Class</span> <span class="title_accent">**AutoCar**</span>
 
-<blockquote class="desc">Class for easy control of AIoT AutoCar Series.</blockquote>  
+<blockquote class="desc">Class for easy control of AIoT AutoCar Series.</blockquote>
 
 The code to import the Autocar Class :
 
@@ -185,7 +185,7 @@ from pop.Pilot import Autocar
 
 ## <span class="title">Class</span> <span class="title_accent">**SerBot**</span>
 
-<blockquote class="desc">Class for easy control of AIoT SerBot Series.</blockquote>  
+<blockquote class="desc">Class for easy control of AIoT SerBot Series.</blockquote>
 
 The code to import the SerBot Class :
 
@@ -248,7 +248,7 @@ from pop.Pilot import SerBot
 ---
 
 ## <span class="title">Class</span> <span class="title_accent">**Data_Collector**</span>
-<blockquote class="desc">Image data collection class for machine learning.</blockquote>  
+<blockquote class="desc">Image data collection class for machine learning.</blockquote>
 
 The code to import the Data_Collector Class :
 

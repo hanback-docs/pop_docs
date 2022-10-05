@@ -47,7 +47,7 @@ cam.stop()
 
 ---   
 
-## <span class="title">Class</span> <span class="title_accent">**Out**<a id="class-out"></a></span>    
+## <span class="title">Class</span> <span class="title_accent">**Out**</span>    
 <blockquote class="desc">Output device is controlled by GPIO.</blockquote>
 
 <h4><b>Initialization</b></h4>
@@ -209,7 +209,7 @@ dcfan.off()
 
 ---   
 
-## <span class="title">Class</span> <span class="title_accent">**Input**<a id="class-input"></a></span>    
+## <span class="title">Class</span> <span class="title_accent">**Input**</span>    
 <blockquote class="desc">Read the Input Device through GPIO.</blockquote>
 <h4><b>Initialization</b></h4>
 
@@ -314,7 +314,7 @@ input("Press <Enter> Key...\n")
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Switch**<a id="class-switch"></a></span>    
+## <span class="title">Class</span> <span class="title_accent">**Switch**</span>    
 <blockquote class="desc">Read the switch status through GPIO.<br>
 This class is used in AIoT Server Plus.</blockquote>
 
@@ -633,7 +633,7 @@ input("Press <Enter> Key...\n")
 <br>
 
 ---
-## <span class="title">Class</span> <span class="title_accent">**SpiAdc**<a id="class-spiadc"></a></span>    
+## <span class="title">Class</span> <span class="title_accent">**SpiAdc**</span>    
 <blockquote class="desc">adc chip control through spi interface.</blockquote>
 
 <h4><b>Initialization</b></h4>

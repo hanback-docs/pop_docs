@@ -24,6 +24,7 @@ nav:
     - Pop.AI : pop.ai.md
     - Pop.Pilot : pop.pilot.md
     - Pop.CAN : pop.can.md
+    - Pop.Util : pop.util.md
     
 highlightjs: true
 hljs_languages: [python, cpp, java, javascript]

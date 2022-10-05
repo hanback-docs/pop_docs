@@ -21,3 +21,7 @@
 
 ## V1.3 (210405)
   - Add Class in Pop.AI
+
+## V1.4 (221005)
+  - Updating Pop
+  - Add Device (AutoCar2, AutoCar3)

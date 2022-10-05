@@ -12,7 +12,6 @@ from pop import *
 
 ## <span class="title">Class</span> <span class="title_accent">**Camera**</span>    
 <blockquote class="desc">Camera</blockquote>
-
 <h4><b>Initialization</b></h4>
 
 &emsp;<code class="code_accent">Camera(width=224, height=224, auto_load=True)</code> : Camera object<br>
@@ -49,7 +48,7 @@ cam.stop()
 ---   
 
 ## <span class="title">Class</span> <span class="title_accent">**Out**<a id="class-out"></a></span>    
-<blockquote class="desc">Output device is controlled by GPIO.</blockquote> 
+<blockquote class="desc">Output device is controlled by GPIO.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -86,7 +85,7 @@ leds.allOff()
 
 ## <span class="title">Class</span> <span class="title_accent">**Led**</span>    
 <blockquote class="desc">LEDs are controlled by GPIO.<br>
-This class is used in AIoT Home, AIoT Server Plus.</blockquote> 
+This class is used in AIoT Home, AIoT Server Plus.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -143,7 +142,6 @@ for i in range(20):
 ## <span class="title">Class</span> <span class="title_accent">**Leds**</span>    
 <blockquote class="desc">LEDs are controlled by GPIO.<br>
 This class is used in PyCBasic.</blockquote>
-
 <h4><b>Initialization</b></h4>
 
 &emsp;<code class="code_accent">Leds(n)</code> : Leds object inheriting from Led Class<br>
@@ -180,7 +178,6 @@ leds.allOff()
 ## <span class="title">Class</span> <span class="title_accent">**Fan**</span>    
 <blockquote class="desc">Fan is controlled by GPIO.<br>
 This class is used in AIoT Home.</blockquote>
-
 <h4><b>Initialization</b></h4>
 
 &emsp;<code class="code_accent">Fan(n)</code> : Fan object inheriting from [Out Class](pop.md#class-out)<br>
@@ -214,7 +211,6 @@ dcfan.off()
 
 ## <span class="title">Class</span> <span class="title_accent">**Input**<a id="class-input"></a></span>    
 <blockquote class="desc">Read the Input Device through GPIO.</blockquote>
-
 <h4><b>Initialization</b></h4>
 
 &emsp;<code class="code_accent">Input(n,activeHigh=True)</code> : Input Object<br>
@@ -259,9 +255,10 @@ print(ret)
 
 ## <span class="title">Class</span> <span class="title_accent">**Flame**</span>    
 <blockquote class="desc">Flame sensor status reading.<br>
-This class is used in AIoT Server Plus, SensorPack option.</blockquote>    
+This class is used in AIoT Server Plus, SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
+
 &emsp;<code class="code_accent">Flame(n)</code> : Flame object inheriting from [Input Class](pop.md#class-input)<br>
 &emsp;&emsp;**Params**   
 &emsp;&emsp;&emsp;`n` : Connected pin number.    
@@ -319,7 +316,7 @@ input("Press <Enter> Key...\n")
 
 ## <span class="title">Class</span> <span class="title_accent">**Switch**<a id="class-switch"></a></span>    
 <blockquote class="desc">Read the switch status through GPIO.<br>
-This class is used in AIoT Server Plus.</blockquote>    
+This class is used in AIoT Server Plus.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -352,7 +349,7 @@ print(data)
 
 ## <span class="title">Class</span> <span class="title_accent">**Switches**</span>    
 <blockquote class="desc">Read the switch status through GPIO.<br>
-This class is used in PyCBasic.</blockquote>    
+This class is used in PyCBasic.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -385,7 +382,7 @@ print(data)
 ---
 ## <span class="title">Class</span> <span class="title_accent">**Bme680**</span>    
 <blockquote class="desc">Read the gas, temperature, humidity and pressure status.<br>
-This class is used in SensorPack option.</blockquote>    
+This class is used in SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -436,7 +433,7 @@ while True:
 
 ## <span class="title">Class</span> <span class="title_accent">**Light**</span>    
 <blockquote class="desc">Light status reading.<br>
-This class is used in SensorPack option.</blockquote>    
+This class is used in SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -470,7 +467,7 @@ while True:
 ---
 ## <span class="title">Class</span> <span class="title_accent">**CO2**</span>    
 <blockquote class="desc">Read status of CO2 Sensor.<br>
-This class is used in SensorPack option.</blockquote>    
+This class is used in SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -501,7 +498,7 @@ while True:
 
 ## <span class="title">Class</span> <span class="title_accent">**Thermopile**</span>    
 <blockquote class="desc">Thermopile sensor status reading.<br>
-This class is used in SensorPack option.</blockquote>  
+This class is used in SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -547,7 +544,7 @@ while True:
 ---
 ## <span class="title">Class</span> <span class="title_accent">**MicroWave**</span>    
 <blockquote class="desc">Reading the speed of obstacles ahead of Micro Wave Sensor.<br>
-This class is used in SensorPack option.</blockquote> 
+This class is used in SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -583,7 +580,7 @@ while True:
 
 ## <span class="title">Class</span> <span class="title_accent">**Pir**</span>    
 <blockquote class="desc">Responds to the movement of infrared wavelengths emitted or reflected from an object.<br>
-This class is used in AIoT Server Plus, SensorPack option.</blockquote> 
+This class is used in AIoT Server Plus, SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -637,7 +634,7 @@ input("Press <Enter> Key...\n")
 
 ---
 ## <span class="title">Class</span> <span class="title_accent">**SpiAdc**<a id="class-spiadc"></a></span>    
-<blockquote class="desc">adc chip control through spi interface.</blockquote>   
+<blockquote class="desc">adc chip control through spi interface.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -695,7 +692,7 @@ input("Press <Enter> Key...\n")
 
 ## <span class="title">Class</span> <span class="title_accent">**Psd**</span>    
 <blockquote class="desc">Distance measurement using PSD sensor.<br>
-This class is used in AIoT Server Plus, PyCBasic.</blockquote>   
+This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -719,7 +716,7 @@ This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 
 ## <span class="title">Class</span> <span class="title_accent">**CDS**</span>  
 <blockquote class="desc">Light measurement using CDS sensor.<br>
-This class is used in AIoT AutoCAR, AIoT AutoCAR Prime, AIoT AutoCAR Prime X, AIoT Home, AIoT SerBot, AIoT SerBot Prime X, AIoT Server Plus, PyCBasic.</blockquote>   
+This class is used in AIoT AutoCAR, AIoT AutoCAR Prime, AIoT AutoCAR Prime X, AIoT Home, AIoT SerBot, AIoT SerBot Prime X, AIoT Server Plus, PyCBasic.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -743,7 +740,7 @@ This class is used in AIoT AutoCAR, AIoT AutoCAR Prime, AIoT AutoCAR Prime X, AI
 
 ## <span class="title">Class</span> <span class="title_accent">**Gas**</span>    
 <blockquote class="desc">Gas amount measurement using Gas sensor.<br>
-This class is used in AIoT Home, AIoT Server Plus.</blockquote>   
+This class is used in AIoT Home, AIoT Server Plus.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -777,7 +774,7 @@ This class is used in AIoT Home, AIoT Server Plus.</blockquote>
 
 ## <span class="title">Class</span> <span class="title_accent">**Temperature**</span>  
 <blockquote class="desc">Temperature measurement using LM32 sensor.<br>
-This class is used in AIoT Server Plus.</blockquote>   
+This class is used in AIoT Server Plus.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -799,7 +796,7 @@ This class is used in AIoT Server Plus.</blockquote>
 
 ## <span class="title">Class</span> <span class="title_accent">**Sound**</span>    
 <blockquote class="desc">Ambient sound measurement using Sound sensor.<br>
-This class is used in AIoT Server Plus, PyCBasic.</blockquote>   
+This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -816,7 +813,7 @@ This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 <!-- 
 ## <span class="title">Class</span> <span class="title_accent">**Vr**</span>    
 <blockquote class="desc">Voltage measurement with variable resistor.<br>
-This class is used in AIoT Server Plus.</blockquote>   
+This class is used in AIoT Server Plus.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -833,7 +830,7 @@ This class is used in AIoT Server Plus.</blockquote>
 
 ## <span class="title">Class</span> <span class="title_accent">**Potentiometer**</span>    
 <blockquote class="desc">Voltage measurement with variable resistor.<br>
-This class is used in AIoT Server Plus, PyCBasic.</blockquote>   
+This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 
 <h4><b>Initialization</b></h4>
 &emsp;<code class="code_accent">Potentiometer(channel=-1, device=0, ce=0, speed=1000000)</code> : Potentiometer object inheriting from [SpiAdc Class](pop.md#class-spiadc)<br>
@@ -856,7 +853,7 @@ This class is used in AIoT Server Plus, PyCBasic.</blockquote>
 
 ## <span class="title">Class</span> <span class="title_accent">**PiezoBuzzer**</span>    
 <blockquote class="desc">PiezoBuzzer is controlled by Software PWM.<br>
-This class is used in AIoT Home, PyCBasic, SensorPack option.</blockquote> 
+This class is used in AIoT Home, PyCBasic, SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -923,7 +920,7 @@ p.play(sheet_butterfly)
 
 ## <span class="title">Class</span> <span class="title_accent">**PixelDisplay**</span>    
 <blockquote class="desc">Pixel Display is controlled by Hardware PWM.<br>
-This class is used in PyCBasic, SensorPack option.</blockquote> 
+This class is used in PyCBasic, SensorPack option.</blockquote>
   
 <h4><b>Initialization</b></h4>
 
@@ -992,7 +989,7 @@ time.sleep(1)
 
 ## <span class="title">Class</span> <span class="title_accent">**Dust**</span>   
 <blockquote class="desc">dust measurement using Dust sensor.<br>
-This class is used in AIoT Home, AIoT Server Plus, SensorPack option.</blockquote>   
+This class is used in AIoT Home, AIoT Server Plus, SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 
@@ -1038,7 +1035,7 @@ while True:
 
 ## <span class="title">Class</span> <span class="title_accent">**PwmController**</span>    
 <blockquote class="desc">I2C communication allows PWM signals to be generated by issuing control commands to the PWM control module, specifying the desired frequency and desired duty cycle for each outputable channel.<br>
-This class is used in AIoT Home, AI Mavin, SensorPack option.</blockquote>   
+This class is used in AIoT Home, AI Mavin, SensorPack option.</blockquote>
 
 <h4><b>Initialization</b></h4>
 

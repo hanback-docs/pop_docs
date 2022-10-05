@@ -6,7 +6,7 @@ Pop.CAN is easy and fast educational Library for CAN Protocol. It supports can c
 <hr/>
 
 ## <span class="title">Class</span> <span class="title_accent">**Can**</span>
-<blockquote class="desc">Class used whe using CAN interface.</blockquote><br>
+<blockquote class="desc">Class used whe using CAN interface.</blockquote>
 
 The code to import the Can Class :
 
@@ -41,7 +41,7 @@ from pop.CAN import Can
 
 ## <span class="title">Class</span> <span class="title_accent">**Car**</span>
 <blockquote class="desc">This class controls AIoT AutoCar using Can communication.<br>
-This class is used in AIoT AutoCAR Prime X, AIoT AutoCAR 2, AIoT AutoCAR 3.</blockquote><br>
+This class is used in AIoT AutoCAR Prime X, AIoT AutoCAR 2, AIoT AutoCAR 3.</blockquote>
 
 The code to import the Car Class :
 
@@ -172,7 +172,7 @@ from pop.CAN import Car
 ## <span class="title">Class</span> <span class="title_accent">**OmniWheel**</span>    
 
 <blockquote class="desc">This class controls OmniWheel using Can communication.<br>
-This class is used in AIoT SerBot Prime X.</blockquote><br>
+This class is used in AIoT SerBot Prime X.</blockquote>
 
 The code to import the OmniWheel Class :
 

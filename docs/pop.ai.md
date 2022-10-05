@@ -161,7 +161,7 @@ from pop.AI import ANN
 
 ## <span class="title">Class</span> <span class="title_accent">**DNN**</span>    
 
-<blockquote class="desc">A simple Deep Neural Network class for many to many datasets. Inherited ANN</blockquote><br>
+<blockquote class="desc">A simple Deep Neural Network class for many to many datasets. Inherited ANN</blockquote>
 
 The code to import the DNN Class :
 
@@ -187,7 +187,7 @@ from pop.AI import DNN
 
 ## <span class="title">Class</span> <span class="title_accent">**CNN**</span>    
 
-<blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited DNN</blockquote><br>
+<blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited DNN</blockquote>
 
 The code to import the CNN Class :
 
@@ -242,7 +242,7 @@ from pop.AI import CNN
 
 ## <span class="title">Class</span> <span class="title_accent">**RNN**</span>    
 
-<blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited ANN</blockquote><br>
+<blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited ANN</blockquote>
 
 The code to import the RNN Class :
 

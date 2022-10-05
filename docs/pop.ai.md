@@ -7,7 +7,7 @@ In addition, it provides functions such as object detection, collision avoidance
 <!-- # Class & Method Description-->
 <hr/>
 
-## <span class="title">Class</span> <span class="title_accent">**Linear_Regression**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Linear_Regression**</span>
 
 <blockquote class="desc">A simple Linear Regression class for one to one datasets.</blockquote>
 
@@ -52,7 +52,7 @@ from pop.AI import Linear_Regression
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Logistic_Regression**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Logistic_Regression**</span>
 
 <blockquote class="desc">A simple Logistic Regression class for many to one datasets. Inherited Linear_Regression class</blockquote>
 
@@ -81,7 +81,7 @@ from pop.AI import Logistic_Regression
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Perceptron**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Perceptron**</span>
 
 <blockquote class="desc">A simple Perceptron class for many to many datasets.</blockquote>
 
@@ -130,7 +130,7 @@ from pop.AI import Perceptron
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**ANN**</span>    
+## <span class="title">Class</span> <span class="title_accent">**ANN**</span>
 
 <blockquote class="desc">A simple Artifitial Neural Network class for many to many datasets. Inherited Perceptron</blockquote>
 
@@ -156,7 +156,7 @@ from pop.AI import ANN
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**DNN**</span>    
+## <span class="title">Class</span> <span class="title_accent">**DNN**</span>
 
 <blockquote class="desc">A simple Deep Neural Network class for many to many datasets. Inherited ANN</blockquote>
 
@@ -182,7 +182,7 @@ from pop.AI import DNN
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**CNN**</span>    
+## <span class="title">Class</span> <span class="title_accent">**CNN**</span>
 
 <blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited DNN</blockquote>
 
@@ -237,7 +237,7 @@ from pop.AI import CNN
 
 --- 
 
-## <span class="title">Class</span> <span class="title_accent">**RNN**</span>    
+## <span class="title">Class</span> <span class="title_accent">**RNN**</span>
 
 <blockquote class="desc">A simple Convolutional Neural Network class for many to many datasets. Inherited ANN</blockquote>
 
@@ -275,7 +275,7 @@ from pop.AI import RNN
 
 --- 
 
-## <span class="title">Class</span> <span class="title_accent">**DQN**</span>    
+## <span class="title">Class</span> <span class="title_accent">**DQN**</span>
 
 <blockquote class="desc">A simple Deep Q-Network class. Inherited DQN</blockquote>
 
@@ -315,7 +315,7 @@ from pop.AI import DQN
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**FaceNet**</span>    
+## <span class="title">Class</span> <span class="title_accent">**FaceNet**</span>
 
 <blockquote class="desc">The FaceNet is a convolutional neural network class for face detection.<br>
 This class is used in AIoT Home.</blockquote>
@@ -349,7 +349,7 @@ from pop.AI import FaceNet
 
 --- 
 
-## <span class="title">Class</span> <span class="title_accent">**Collision_Avoid**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Collision_Avoid**</span>
 
 <blockquote class="desc">The Collision_Avoid is a convolutional neural network class for obstacle recognition.<br>
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
@@ -397,7 +397,7 @@ from pop.AI import Collision_Avoid
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Object_Follow**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Object_Follow**</span>
 
 <blockquote class="desc">The Object_Follow is a convolutional neural network class for optimal object recognition.<br>
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
@@ -436,7 +436,7 @@ from pop.AI import Object_Follow
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Track_Follow**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Track_Follow**</span>
 
 <blockquote class="desc">The Track_Follow is a neural network class designed with a convolutional neural network for track recognition.<br>
 This class can be used in AIoT AutoCAR Series, AIoT SerBot Series.<br>
@@ -484,7 +484,7 @@ from pop.AI import Track_Follow
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Object_Detect**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Object_Detect**</span>
 
 <blockquote class="desc">Class for experiencing object detection models.<br>
 This class is used in AI Mavin.</blockquote>
@@ -518,7 +518,7 @@ from pop.AI import Object_Detect
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Pose_Estimation**</span>    
+## <span class="title">Class</span> <span class="title_accent">**Pose_Estimation**</span>
 
 <blockquote class="desc">The Pose_Estimation is a convolutional neural network class for optimal pose estimation.<br>
 This class is used in AIoT AutoCAR 2.</blockquote>

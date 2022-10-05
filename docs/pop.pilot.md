@@ -7,8 +7,7 @@ This library is used in AIoT AutoCAR Series, AIoT SerBot Series.
 <!-- # Class & Method Description-->
 <hr/>
 
-## <span class="title">Class</span> <span class="title_accent">**Driving**</span>    
-<br>
+## <span class="title">Class</span> <span class="title_accent">**Driving**</span>
 
 <h4><b>Initialization</b></h4> 
 
@@ -53,9 +52,9 @@ drv.stop()
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**AutoCar**</span>    
+## <span class="title">Class</span> <span class="title_accent">**AutoCar**</span>
 
-<blockquote class="desc">Class for easy control of AIoT AutoCar Series.</blockquote>
+<blockquote class="desc">Class for easy control of AIoT AutoCar Series.</blockquote>  
 
 The code to import the Autocar Class :
 
@@ -184,9 +183,9 @@ from pop.Pilot import Autocar
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**SerBot**</span>    
+## <span class="title">Class</span> <span class="title_accent">**SerBot**</span>
 
-<blockquote class="desc">Class for easy control of AIoT SerBot Series.</blockquote>
+<blockquote class="desc">Class for easy control of AIoT SerBot Series.</blockquote>  
 
 The code to import the SerBot Class :
 
@@ -235,9 +234,7 @@ from pop.Pilot import SerBot
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**joystick**</span>    
-<br>
-
+## <span class="title">Class</span> <span class="title_accent">**joystick**</span>
 <h4><b>Initialization</b></h4> 
 
 &emsp;<code class="code_accent">joystick()</code> : joystick object<br>
@@ -250,9 +247,8 @@ from pop.Pilot import SerBot
 
 ---
 
-## <span class="title">Class</span> <span class="title_accent">**Data_Collector**</span>    
-
-<blockquote class="desc">Image data collection class for machine learning.</blockquote>
+## <span class="title">Class</span> <span class="title_accent">**Data_Collector**</span>
+<blockquote class="desc">Image data collection class for machine learning.</blockquote>  
 
 The code to import the Data_Collector Class :
 

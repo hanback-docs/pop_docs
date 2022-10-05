@@ -5,8 +5,7 @@ Pop.Dataset is an easy and fast training library for robot control.
 <!-- # Class & Method Description-->
 <hr/>
 
-## <span class="title">Function</span> <span class="title_accent">**Collector**</span>   
-<br>
+## <span class="title">Function</span> <span class="title_accent">**Collector**</span>
 
 The code to use the Collector method :
 
